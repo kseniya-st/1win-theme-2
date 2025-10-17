@@ -1,0 +1,95 @@
+{
+    "slotCards": [
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        },
+        {
+            "img":"slot-card.png",
+            "btns": [
+                {
+                    "modificator":"btn--primary",
+                    "text":"Play now"
+                },
+                {
+                    "modificator":"btn--extra",
+                    "text":"Play Demo"
+                }
+            ]
+        }
+    ]
+}

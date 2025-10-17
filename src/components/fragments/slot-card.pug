@@ -1,0 +1,10 @@
+//- @defaultData = slotCards[0]
+//- @mixin
+include /components/fragments/button.pug
+mixin slotCard(item)
+    li.slot-card
+        .slot-card__wrap 
+            .slot-card__btns
+                each btn in item.btns
+                    +button(btn.modificator, btn.text)
+        img(src=`img/${item.img}`, alt="")

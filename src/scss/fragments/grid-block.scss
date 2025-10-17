@@ -17,6 +17,8 @@
         d3: 400px,
         d4: 350px,
         d5: 250px,
+        d6: 220px,
+        d7: 180px,
     );
 
     @each $name, $value in $grid-sizes {

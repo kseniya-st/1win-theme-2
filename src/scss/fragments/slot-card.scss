@@ -1,0 +1,53 @@
+@use "../settings" as *;
+
+.slot-card {
+    position: relative;
+    align-self: stretch;
+    border-radius: 16px;
+    overflow: hidden;
+
+    min-height: 264px;
+    @include flex(row, stretch, stretch);
+    cursor: pointer;
+
+    &:hover {
+        .slot-card__wrap {
+            transform: translateX(0);
+        }
+    }
+
+    &__btns {
+        @include flex(column, center, flex-start, 8px);
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__wrap {
+        width: 100%;
+        z-index: 1;
+        padding: 16px;
+        background: rgba(16, 18, 17, 0.7);
+        @include flex(row, center, center);
+
+        transform: translateX(-100%);
+        @include transition(transform);
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include media-max-sm {
+        min-height: 197px;
+        &__btns {
+            .btn {
+                padding: 8px 20px;
+            }
+        }
+    }
+}
