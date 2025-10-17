@@ -1,0 +1,99 @@
+{
+    "eventCards": [
+        {
+            "league": {
+                "text": "England. Premier League",
+                "img": "league.png"
+            },
+            "team1": {
+                "img": "arsenal.png",
+                "text": "Arsenal"
+            },
+            "team2": {
+                "img": "man-city.png",
+                "text": "Man City"
+            },
+            "time": "<span>18:30</span> 21.09.2025",
+            "btn": {
+                "modificator": "btn--tertiary",
+                "text": "Make a Bet"
+            }
+        },
+        {
+            "league": {
+                "text": "England. Premier League",
+                "img": "league.png"
+            },
+            "team1": {
+                "img": "arsenal.png",
+                "text": "Arsenal"
+            },
+            "team2": {
+                "img": "man-city.png",
+                "text": "Man City"
+            },
+            "time": "<span>18:30</span> 21.09.2025",
+            "btn": {
+                "modificator": "btn--tertiary",
+                "text": "Make a Bet"
+            }
+        },
+        {
+            "league": {
+                "text": "England. Premier League",
+                "img": "league.png"
+            },
+            "team1": {
+                "img": "arsenal.png",
+                "text": "Arsenal"
+            },
+            "team2": {
+                "img": "man-city.png",
+                "text": "Man City"
+            },
+            "time": "<span>18:30</span> 21.09.2025",
+            "btn": {
+                "modificator": "btn--tertiary",
+                "text": "Make a Bet"
+            }
+        },
+        {
+            "league": {
+                "text": "England. Premier League",
+                "img": "league.png"
+            },
+            "team1": {
+                "img": "arsenal.png",
+                "text": "Arsenal"
+            },
+            "team2": {
+                "img": "man-city.png",
+                "text": "Man City"
+            },
+            "time": "<span>18:30</span> 21.09.2025",
+            "btn": {
+                "modificator": "btn--tertiary",
+                "text": "Make a Bet"
+            }
+        },
+        {
+            "league": {
+                "text": "England. Premier League",
+                "img": "league.png"
+            },
+            "team1": {
+                "img": "arsenal.png",
+                "text": "Arsenal"
+            },
+            "team2": {
+                "img": "man-city.png",
+                "text": "Man City"
+            },
+            "time": "<span>18:30</span> 21.09.2025",
+            "btn": {
+                "modificator": "btn--tertiary",
+                "text": "Make a Bet"
+            }
+        }
+    ]
+}

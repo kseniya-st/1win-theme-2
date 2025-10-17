@@ -28,17 +28,14 @@ $font-size-default: 16;
 @mixin font-text-lg-m() {
     font-size: rem(18);
     line-height: 150%;
-    font-weight: 500;
 }
 
 @mixin font-text-md() {
     font-size: rem(16);
     line-height: 150%;
-    font-weight: 400;
 }
 
 @mixin font-text-sm() {
     font-size: rem(14);
     line-height: 150%;
-    font-weight: 400;
 }

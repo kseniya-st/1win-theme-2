@@ -11,6 +11,28 @@ html(lang="en")
 
         main
             include ../components/blocks/section-hero.pug
+
+            section.wrapper 
+                include ../components/fragments/links-block.pug
+
+            section.wrapper 
+                include ../components/fragments/toc-section.pug
+
+            section.wrapper.with-btn
+                h2 Sport Categories
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d5.grid-block--fit 
+                    each item in categories 
+                        +categoryCard(item)
+
+            section.wrapper.with-btn
+                h2 Betting Events               
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d5
+                    each item in eventCards 
+                        +eventCard(item)
+                        
+
             section.wrapper
                 h2 Today IPL Match Prediction
                 include ../components/fragments/button.pug

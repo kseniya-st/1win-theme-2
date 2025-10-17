@@ -33,14 +33,18 @@ h6:not([class]) {
     }
 }
 
-a:not([class]) {
-    color: var(--text-secondary, #d2d2d2);
-    text-decoration: underline;
-    @include transition(color);
+p:not([class]),
+ul:not([class]),
+ol:not([class]) {
+    a:not([class]) {
+        color: var(--text-secondary, #d2d2d2);
+        text-decoration: underline;
+        @include transition(color);
 
-    @include hoverActiveFocus {
-        text-decoration: none;
-        color: var(--link-color-hover, #0075ff);
+        @include hoverActiveFocus {
+            text-decoration: none;
+            color: var(--link-color-hover, #0075ff);
+        }
     }
 }
 
@@ -92,6 +96,7 @@ ol.wp-block-list {
             color: var(--text-main, #fff);
             text-align: center;
             font-weight: 600;
+            @include font-text-sm;
         }
     }
 }

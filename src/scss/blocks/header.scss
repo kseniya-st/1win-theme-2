@@ -43,8 +43,8 @@
             width: 100%;
             gap: 20px;
             overflow-y: auto;
-            @include thin-v-scrollbar;
             display: none;
+            @include thin-v-scrollbar;
         }
     }
 

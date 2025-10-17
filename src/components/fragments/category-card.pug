@@ -1,0 +1,6 @@
+//- @defaultData = categories[0]
+//- @mixin
+mixin categoryCard(item)
+    li.category-card 
+        | #{item.text}
+        img(src=`img/${item.img}`, alt="")

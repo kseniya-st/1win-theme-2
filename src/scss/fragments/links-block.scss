@@ -1,0 +1,48 @@
+@use "../settings" as *;
+
+.links-block {
+    margin-top: 20px;
+    display: grid;
+
+    gap: 16px;
+    align-items: stretch;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &__link {
+        height: 100%;
+        padding: 16px;
+        border-radius: var(--card-radius, 16px);
+        background: var(--card-bg, #1d1e21);
+
+        @include flex(row, center, flex-start, 16px);
+
+        color: var(--text-main, #fff);
+        @include transition(background);
+
+        @include font-text-lg-m;
+
+        img {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        & > svg {
+            min-width: 20px;
+            margin-left: auto;
+        }
+
+        @include hoverActiveFocus {
+            background: var(--card-secondary-bg, #27292d);
+        }
+    }
+
+    @include media-max-sm {
+        margin-top: 16px;
+    }
+}

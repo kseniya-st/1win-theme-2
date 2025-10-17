@@ -1,0 +1,17 @@
+//- @defaultData = eventCards[0]
+//- @mixin
+mixin eventCard(item)
+    li.event-card 
+        p.event-card__league
+            img(src=`img/${item.league.img}`, alt="")
+            | #{item.league.text} 
+        .event-card__row 
+            .event-card__team 
+                img(src=`img/${item.team1.img}`, alt="")
+                | #{item.team1.text}
+            time.event-card__time(datetime="2025-09-21 18:30")!= item.time
+            .event-card__team 
+                img(src=`img/${item.team2.img}`, alt="")
+                | #{item.team2.text}
+        +button(item.btn.modificator, item.btn.text)
+

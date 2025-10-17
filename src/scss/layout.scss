@@ -8,16 +8,15 @@
     padding: 0 var(--offsets, 40px);
 
     & > img:not([class]) {
-        margin-top: 24px;
+        margin-top: 20px;
         &:first-child {
             margin-top: 0;
         }
     }
 
     & > .btn {
-        min-width: 170px;
         max-width: 100%;
-        margin-top: 24px;
+        margin-top: 20px;
         &:first-child {
             margin-top: 0;
         }
@@ -33,44 +32,31 @@
     &.with-btn {
         display: grid;
         grid-template-columns: 1fr auto;
-    }
+        column-gap: 16px;
 
-    @include media-min-md {
-        &.with-btn {
-            & > * {
-                grid-column: 1 / -1;
-            }
-            & > h2 {
-                grid-column: 1 / 2;
-                align-self: center;
-            }
-            & > .btn {
-                grid-column: 2 / -1;
-                padding-block: 12px;
-                align-self: center;
-                margin-top: 0;
-            }
+        & > * {
+            grid-column: 1 / -1;
         }
-    }
-
-    @include media-max-md {
-        &.with-btn {
-            grid-template-columns: 1fr;
-            & > .btn {
-                order: 100;
-            }
+        & > h2 {
+            grid-column: 1 / 2;
+            align-self: center;
+        }
+        & > .btn {
+            grid-column: 2 / -1;
+            align-self: center;
+            margin-top: 0;
         }
     }
 
     @include media-max-sm {
         & > img:not([class]) {
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         & > .btn {
             width: 100%;
             min-width: unset;
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         & > .btn {
