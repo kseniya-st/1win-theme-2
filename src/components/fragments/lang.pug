@@ -1,0 +1,9 @@
+include /layouts/base.pug
+.lang.js-lang
+    img(src="img/en.png" alt="")
+    span EN
+    +icon("lang-arrow")
+    ul.lang__list 
+        each el in lang 
+            li.lang__item
+                a.lang__link(href="#")= el.text

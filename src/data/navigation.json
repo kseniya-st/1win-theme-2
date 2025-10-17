@@ -1,107 +1,113 @@
 {
     "navigation": [
         {
-            "title": "Tips",
+            "title": "App",
             "link": "#"
         },
         {
-            "title": "Odds",
+            "title": "Bonuses",
             "link": "#"
         },
         {
-            "title": "Betting Apps",
+            "title": "Casino games",
             "link": "/",
             "submenu": [
                 {
-                    "title": "Online Casinos",
+                    "title": "Lucky Jet",
                     "link": "/"
                 },
                 {
-                    "title": "No deposit Casinos",
-                    "link": "/"
-                },
-                {
-                    "title": "Online Casinos 2",
-                    "link": "/"
-                },
-                {
-                    "title": "No deposit Casinos 2",
-                    "link": "/"
-                },
-                {
-                    "title": "Live Casinos",
+                    "title": "Lucky Jet",
                     "link": "/",
                     "submenu": [
                         {
-                            "title": "StayCasino",
+                            "title": "Lucky Jet",
                             "link": "/"
                         },
                         {
-                            "title": "Aviator",
+                            "title": "Lucky Jet",
                             "link": "/"
                         },
                         {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
+                            "title": "Lucky Jet",
                             "link": "/"
                         }
                     ]
                 },
                 {
-                    "title": "New Casinos",
+                    "title": "Lucky Jet",
+                    "link": "/"
+                }
+            ]
+        },
+        {
+            "title": "Betting",
+            "link": "#",
+            "submenu": [
+                {
+                    "title": "Lucky Jet",
+                    "link": "/"
+                },
+                {
+                    "title": "Lucky Jet",
                     "link": "/",
                     "submenu": [
                         {
-                            "title": "StayCasino",
+                            "title": "Lucky Jet",
                             "link": "/"
                         },
                         {
-                            "title": "Aviator",
-                            "link": "/"
+                            "title": "Lucky Jet",
+                            "link": "/",
+                            "submenu": [
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                },
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                },
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                }
+                            ]
                         },
                         {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
+                            "title": "Lucky Jet",
                             "link": "/"
                         }
                     ]
                 },
                 {
-                    "title": "Crypto Casinos",
+                    "title": "Lucky Jet",
                     "link": "/",
                     "submenu": [
                         {
-                            "title": "StayCasino",
+                            "title": "Lucky Jet",
                             "link": "/"
                         },
                         {
-                            "title": "Aviator",
-                            "link": "/"
+                            "title": "Lucky Jet",
+                            "link": "/",
+                            "submenu": [
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                },
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                },
+                                {
+                                    "title": "Lucky Jet",
+                                    "link": "/"
+                                }
+                            ]
                         },
                         {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
+                            "title": "Lucky Jet",
                             "link": "/"
                         }
                     ]
@@ -109,170 +115,57 @@
             ]
         },
         {
-            "title": "Online Casino",
+            "title": "Aviator",
             "link": "#"
         },
         {
-            "title": "Betting Sites",
-            "link": "/",
+            "title": "Sports",
+            "link": "#"
+        },
+        {
+            "title": "Registration",
+            "link": "#"
+        },
+        {
+            "title": "Promotion",
+            "link": "#"
+        },
+        {
+            "title": "Aviator",
+            "link": "#"
+        },
+        {
+            "title": "Aviator",
+            "link": "#",
             "submenu": [
                 {
-                    "title": "Online Casinos",
-                    "link": "/",
-                    "submenu": [
-                        {
-                            "title": "StayCasino",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Aviator",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
-                            "link": "/"
-                        }
-                    ]
+                    "title": "Aviator",
+                    "link": "#"
                 },
                 {
-                    "title": "No deposit Casinos",
-                    "link": "/",
-                    "submenu": [
-                        {
-                            "title": "StayCasino",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Aviator",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
-                            "link": "/"
-                        }
-                    ]
+                    "title": "Aviator",
+                    "link": "#"
                 },
                 {
-                    "title": "Live Casinos",
-                    "link": "/",
-                    "submenu": [
-                        {
-                            "title": "StayCasino",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Aviator",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
-                            "link": "/"
-                        }
-                    ]
-                },
-                {
-                    "title": "New Casinos",
-                    "link": "/",
-                    "submenu": [
-                        {
-                            "title": "StayCasino",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Aviator",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
-                            "link": "/"
-                        }
-                    ]
-                },
-                {
-                    "title": "Crypto Casinos",
-                    "link": "/",
-                    "submenu": [
-                        {
-                            "title": "StayCasino",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Aviator",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Spin Samurai",
-                            "link": "/"
-                        },
-                        {
-                            "title": "Slotman",
-                            "link": "/"
-                        },
-                        {
-                            "title": "PlayAmo",
-                            "link": "/"
-                        }
-                    ]
+                    "title": "Aviator",
+                    "link": "#"
                 }
             ]
         },
         {
-            "title": "Signup Guides",
-            "link": "/",
-            "submenu": [
-                {
-                    "title": "Signup Guide 1",
-                    "link": "/"
-                },
-                {
-                    "title": "Signup Guide 2",
-                    "link": "/"
-                },
-                {
-                    "title": "Signup Guide 3",
-                    "link": "/"
-                },
-                {
-                    "title": "Signup Guide 4",
-                    "link": "/"
-                }
-            ]
+            "title": "Aviator",
+            "link": "#"
+        }
+    ],
+    "lang": [
+        {
+            "text": "English"
         },
         {
-            "title": "Betting Offers",
-            "link": "#"
+            "text": "English"
+        },
+        {
+            "text": "English"
         }
     ]
 }

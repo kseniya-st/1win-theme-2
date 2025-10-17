@@ -1,0 +1,117 @@
+@use "../settings" as *;
+
+.lang {
+    cursor: pointer;
+    position: relative;
+    z-index: $z-index-lang;
+    order: 100;
+
+    border-radius: var(--button-radius, 12px);
+    background: var(--card-secondary-bg, #27292d);
+
+    padding: 8px;
+    @include flex(row, center, center, 8px);
+
+    color: var(--text-main, #fff);
+
+    @include transition(#{background});
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    @include hoverActiveFocus {
+        background: var(--card-bg, #1d1e21);
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        object-fit: cover;
+    }
+
+    svg {
+        min-width: 20px;
+        @include transition(transform);
+    }
+
+    &.active {
+        .lang__list {
+            display: flex;
+        }
+        & > svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__list {
+        min-width: 153px;
+        position: absolute;
+        z-index: 1;
+        top: calc(100% + 12px);
+        right: 0;
+        width: 100%;
+        max-height: 300px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding: 8px;
+        border-radius: var(--card-radius, 16px);
+        background: var(--card-bg, #1d1e21);
+
+        @include flex(column, stretch, flex-start, 2px);
+        display: none;
+
+        @include thin-v-scrollbar;
+    }
+
+    &__link {
+        width: 100%;
+        padding: 8px 16px;
+
+        @include flex(row, center, flex-start, 8px);
+        @include transition(#{background});
+
+        border-radius: var(--button-radius, 12px);
+
+        @include hoverActiveFocus {
+            background: var(--card-secondary-bg, #27292d);
+        }
+    }
+
+    @include media-max-mlg {
+        width: 100%;
+        background: transparent;
+        flex-wrap: wrap;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            border-radius: var(--button-radius, 12px);
+            background: var(--card-secondary-bg, #27292d);
+        }
+
+        & > svg {
+            margin-left: auto;
+        }
+
+        &__list {
+            position: relative;
+            width: calc(100% + 8px * 2);
+            margin-inline: -8px;
+            top: unset;
+            margin-top: 8px;
+            padding: 0;
+            gap: 8px;
+            border-radius: 0;
+            background: transparent;
+        }
+    }
+}

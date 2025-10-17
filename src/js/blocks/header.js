@@ -2,6 +2,7 @@ import { debounce } from "../utils/debounce";
 
 const HEADER_SELECTOR = ".js-header";
 const BURGER_SELECTOR = ".js-burger";
+const HEADER_OVERLAY_SELECTOR = ".js-header__overlay";
 
 const MENU_SELECTOR = ".js-menu";
 const MENU_ITEM_SELECTOR = ".js-menu__item";
@@ -27,6 +28,8 @@ export class Header {
         this.menuEl = document.querySelector(MENU_SELECTOR);
         this.menuItems = this.menuEl?.querySelectorAll(MENU_ITEM_SELECTOR);
 
+        this.headerOverlay = document.querySelector(HEADER_OVERLAY_SELECTOR);
+
         // for MULTI-LEVEl menu
         this.firstLevelMenuItems = this.menuEl?.querySelectorAll(
             `:scope > ${MENU_LIST_SELECTOR} > ${MENU_ITEM_SELECTOR}`
@@ -38,7 +41,7 @@ export class Header {
         this.initMenu();
         this.updateOrientation();
         this.setHeaderHeight();
-
+        this.initHeaderOverlay();
 
         window.addEventListener(
             "resize",
@@ -48,12 +51,16 @@ export class Header {
         );
     }
 
+    initHeaderOverlay() {
+        this.headerOverlay?.addEventListener("click", () => this.closeMenu());
+    }
+
     handleResize() {
+        this.setHeaderHeight();
         if (this.currentWidth !== window.innerWidth) {
             this.currentWidth = window.innerWidth;
             this.closeMenu();
             this.updateOrientation(); // if multi-level menu
-            this.setHeaderHeight();
         }
     }
 
@@ -103,6 +110,7 @@ export class Header {
     }
 
     setHeaderHeight() {
+        this.header.style.removeProperty("--header-height");
         const headerHeight = this.header.getBoundingClientRect().height;
         this.header.style.setProperty("--header-height", `${headerHeight}px`);
     }

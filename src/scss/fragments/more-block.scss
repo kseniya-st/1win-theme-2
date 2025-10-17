@@ -1,0 +1,59 @@
+@use "../settings" as *;
+
+.more-block {
+    position: relative;
+    align-self: stretch;
+    // display: none;
+
+    &::after {
+        content: "";
+        @include size(calc(100% + 20px), 24px);
+        @include absolute(100%, -10px);
+        transform: translate(0, -4px);
+        display: none;
+    }
+
+    &__btn {
+        @include flex(row, center, center, 6px);
+        height: 100%;
+        padding: 9px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+        }
+    }
+
+    &__circle,
+    &__btn::before,
+    &__btn::after {
+        border-radius: 50%;
+        display: block;
+        @include size(6px, 6px);
+        background: var(--On-Surface, #f4f8fd);
+    }
+
+    & &__dropdown {
+        max-width: 250px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 16px);
+
+        & > .submenu {
+            display: flex;
+            width: max-content;
+            top: 0;
+        }
+    }
+
+    @include hover {
+        &::after {
+            display: block;
+        }
+        .more-block__dropdown {
+            display: flex;
+        }
+    }
+}

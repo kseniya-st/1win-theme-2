@@ -1,26 +1,45 @@
 include /layouts/base.pug
 header.header.js-header 
-    a.header__logo(href="#") 
-        img(src="img/logo.png" alt="")
-    nav.header__nav.js-burger__nav.js-menu
-        ul.header-menu.js-menu__list
-            each item in navigation
-                li(class=`item ${item.submenu ? 'parent js-menu__item' : ''}`) 
-                    a(href= item.link)= item.title
-                    if item.submenu 
-                        include /img/svg/test.svg
-                        ul.submenu.js-menu__list
-                            each el in item.submenu 
-                                li(class=`item ${el.submenu ? 'parent js-menu__item' : ''}`) 
-                                    a(href= el.link)= el.title
-                                    if el.submenu 
-                                        include /img/svg/test.svg
-                                        ul.submenu
-                                            each submenuEl in el.submenu 
-                                                li.item
-                                                    a(href= submenuEl.link)= submenuEl.title
-    .header__burger.js-burger
-        span 
+    .header__overlay.js-header__overlay
+    .header__wrap 
+        .header__burger.js-burger
+            span  
+        a.header__logo(href="#") 
+            img(src="img/logo.png" alt="")
+        .header__mob
+            nav.header__nav.js-burger__nav.js-menu.js-more
+                ul.header-menu.js-menu__list.js-more__menu
+                    each el in navigation
+                        li.js-more__item.js-menu__item(class=`item ${el.submenu ? 'parent' : ''}`)
+                            a(href=el.link)= el.title 
+                            if el.submenu
+                                +icon("arrow-down")
+                                ul.submenu.js-menu__list
+                                    each submenuEl in el.submenu 
+                                        li.item.js-menu__item(class=`item ${submenuEl.submenu ? 'parent' : ''}`)   
+                                            a(href=submenuEl.link)
+                                                if submenuEl.svg 
+                                                    +icon(submenuEl.svg)
+                                                | #{submenuEl.title}
+                                            if submenuEl.submenu
+                                                +icon("arrow-down")
+                                                ul.submenu
+                                                    each submenuEl2 in submenuEl.submenu 
+                                                        li.item.js-menu__item   
+                                                            a(href=submenuEl2.link)
+                                                                if submenuEl2.svg 
+                                                                    +icon(submenuEl2.svg)
+                                                                | #{submenuEl2.title}
+                    li.more-block.js-more__btn   
+                        .more-block__btn 
+                            span.more-block__circle 
+                        .more-block__dropdown 
+                            ul.submenu.js-more__list
+            include /components/fragments/lang.pug
+        .header__btns 
+            +button("btn--primary","Register")
+            +button("btn--extra","Download App")
+
 
 
 
