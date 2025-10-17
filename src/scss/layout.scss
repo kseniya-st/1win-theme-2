@@ -3,29 +3,86 @@
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: calc(var(--width-container) + var(--offsets, 20px) * 2);
+    max-width: calc(var(--width-container) + var(--offsets, 40px) * 2);
+    margin: var(--wrapper-margin) auto 0;
+    padding: 0 var(--offsets, 40px);
 
-    margin: var(--wrapper-margin) auto;
-    padding: 0 var(--offsets, 20px);
-
-    & > img {
-        &:not(:first-child) {
-            margin-top: 20px;
-        }
-        &:not(:last-child) {
-            margin-bottom: 16px;
+    & > img:not([class]) {
+        margin-top: 24px;
+        &:first-child {
+            margin-top: 0;
         }
     }
 
     & > .btn {
-        &:not(:first-child) {
-            margin-top: 20px;
+        min-width: 170px;
+        max-width: 100%;
+        margin-top: 24px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    & > p:not([class]),
+    & > h2:not([class]),
+    & > h2.heading,
+    & > h1:not([class]) {
+        max-width: 1156px;
+    }
+
+    &.with-btn {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    @include media-min-md {
+        &.with-btn {
+            & > * {
+                grid-column: 1 / -1;
+            }
+            & > h2 {
+                grid-column: 1 / 2;
+                align-self: center;
+            }
+            & > .btn {
+                grid-column: 2 / -1;
+                padding-block: 12px;
+                align-self: center;
+                margin-top: 0;
+            }
         }
     }
 
     @include media-max-md {
+        &.with-btn {
+            grid-template-columns: 1fr;
+            & > .btn {
+                order: 100;
+            }
+        }
+    }
+
+    @include media-max-sm {
+        & > img:not([class]) {
+            margin-top: 20px;
+        }
+
+        & > .btn {
+            width: 100%;
+            min-width: unset;
+            margin-top: 20px;
+        }
+
         & > .btn {
             width: 100%;
         }
+    }
+}
+
+.breadcrumbs + main > .wrapper:first-child {
+    margin-top: 20px;
+
+    @include media-max-sm {
+        margin-top: 10px;
     }
 }

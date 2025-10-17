@@ -8,30 +8,27 @@ $font-size-default: 16;
 @mixin font-display-l() {
     font-size: rem(36);
     line-height: 140%;
-    font-weight: 600;
-
-    @include media-max-sm {
-        font-size: rem(30);
-        line-height: 130%;
-    }
 }
 
 @mixin font-display-xs() {
     font-size: rem(24);
     line-height: 130%;
-    font-weight: 600;
 }
 
 @mixin font-text-xl() {
     font-size: rem(20);
     line-height: 140%;
-    font-weight: 600;
 }
 
 @mixin font-text-lg() {
     font-size: rem(18);
     line-height: 150%;
-    font-weight: 600;
+}
+
+@mixin font-text-lg-m() {
+    font-size: rem(18);
+    line-height: 150%;
+    font-weight: 500;
 }
 
 @mixin font-text-md() {

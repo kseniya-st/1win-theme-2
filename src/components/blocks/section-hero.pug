@@ -1,0 +1,13 @@
+include /layouts/base.pug
+section.wrapper.section-hero
+    .section-hero__wrap 
+        .section-hero__block 
+            h1 1win Argentina - The Ideal Platform for Online Betting and Casino
+            p Discover 1win Argentina, an online betting and casino platform with a wide range of games and exciting betting opportunities. 1win is a secure and easy-to-use platform that offers users exciting 1win casino games. From live betting to popular slots, 1win offers quality entertainment for all players.
+            .section-hero__promo
+                include /components/fragments/promo-block.pug
+                +button("btn--primary", "Registration")
+    img(src="img/section-hero.png", alt="")
+    ul.grid-block.grid-block--d2
+        each item in bonusBanners
+            +bonusBanner(item) 

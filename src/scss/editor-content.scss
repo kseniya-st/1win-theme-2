@@ -4,72 +4,95 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: var(--editor-content-margin, 16px);
-
-    &:not(:first-child) {
-        margin-top: var(--editor-content-margin, 16px);
-    }
+    color: var(--text-main, #fff);
+    font-weight: 600;
+    @include font-text-xl;
 }
 
-a {
-    color: var(--on-surface-variant);
-}
-
-p:not([class]) {
+p:not([class]),
+ul:not([class]),
+ul.wp-block-list,
+ol:not([class]),
+ol.wp-block-list {
+    margin-top: 16px;
     &:first-child {
         margin-top: 0;
     }
-
-    margin-top: var(--editor-content-margin, 16px);
 }
 
-p,
-ul,
-ol {
-    &:not([class]) {
-        a:not([class]) {
-            color: var(--primary, #7ade50);
-            @include transition(color);
-            @include hoverActiveFocus {
-                color: #fff;
-            }
-        }
+h1:not([class]),
+h2:not([class]),
+h2.heading,
+h3:not([class]),
+h4:not([class]),
+h5:not([class]),
+h6:not([class]) {
+    margin-top: 20px;
+    &:first-child {
+        margin-top: 0;
     }
+}
+
+a:not([class]) {
+    color: var(--text-secondary, #d2d2d2);
+    text-decoration: underline;
+    @include transition(color);
+
+    @include hoverActiveFocus {
+        text-decoration: none;
+        color: var(--link-color-hover, #0075ff);
+    }
+}
+
+h1,
+h2 {
+    color: var(--text-main, #fff);
+    font-weight: 600;
 }
 
 h1 {
-    margin-bottom: 20px;
+    @include font-display-l;
+
+    @include media-max-sm {
+        @include font-display-xs;
+    }
 }
 
 h2 {
-    margin-bottom: 32px;
-
-    @include media-max-sm {
-        margin-bottom: 28px;
-    }
-}
-
-h3 {
-    &:not([class]) {
-        margin-top: 24px;
-    }
-
-    @include media-max-sm {
-        &:not([class]) {
-            margin-top: 20px;
-        }
-    }
+    @include font-display-xs;
 }
 
 ul:not([class]),
 ul.wp-block-list,
 ol:not([class]),
 ol.wp-block-list {
-    &:not(:first-child) {
-        margin-top: var(--editor-content-margin, 16px);
-    }
     li {
         position: relative;
+        margin-top: 8px;
+        padding-left: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 22px;
+            height: 22px;
+
+            @include flex(row, center, center);
+            border-radius: 50%;
+            background-color: var(--accent-base, #0051ff);
+            border-bottom: 1px solid var(--text-main, #fff);
+            background-position: center center;
+
+            color: var(--text-main, #fff);
+            text-align: center;
+            font-weight: 600;
+        }
     }
 }
 
@@ -78,25 +101,13 @@ ol.wp-block-list {
     counter-reset: ol-default;
 
     li {
+        position: relative;
         counter-increment: ol-default;
-        padding-left: 27px;
+        padding-left: 38px;
+        min-height: 24px;
 
         &::before {
-            position: absolute;
-            content: counter(ol-default) ". ";
-            width: 27px;
-            left: 0;
-            text-align: center;
-        }
-    }
-
-    @include media-max-sm {
-        li {
-            padding-left: 16px;
-
-            &::before {
-                width: 16px;
-            }
+            content: counter(ol-default);
         }
     }
 }
@@ -104,28 +115,9 @@ ol.wp-block-list {
 ul:not([class]),
 ul.wp-block-list {
     li {
-        padding-left: 26px;
-
         &::before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 11px;
-            width: 5px;
-            height: 5px;
-            border-radius: 8px;
-            background: var(--on-surface, #e1e4d9);
-        }
-
-        @include media-max-sm {
-            padding-left: 20px;
-
-            &::before {
-                top: 9px;
-                left: 9px;
-                width: 3px;
-                height: 3px;
-            }
+            background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.863 3.15a.7.7 0 0 0-.494.225L5.204 9.774l-2.57-2.668a.72.72 0 0 0-.51-.227.7.7 0 0 0-.517.218.74.74 0 0 0-.207.522.75.75 0 0 0 .215.517l3.08 3.196a.707.707 0 0 0 1.019 0l6.674-6.928a.75.75 0 0 0 .157-.804.73.73 0 0 0-.27-.331.7.7 0 0 0-.412-.118" fill="%23fff"/></svg>');
+            background-size: 14px 14px;
         }
     }
 }

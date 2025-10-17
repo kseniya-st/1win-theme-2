@@ -1,0 +1,16 @@
+//- @defaultData = bonusBanners
+//- @mixin
+mixin bonusBanner(item)
+    div.bonus-banner(style=`background-image: ${item.grad}` class=`${item.modificator ? item.modificator : ''}`)
+        .bonus-banner__content 
+            p.bonus-banner__type= item.type 
+            p.bonus-banner__title= item.title
+            p.bonus-banner__descr= item.descr
+        if item.promo 
+            .bonus-banner__block 
+                .promo-block.js-copy
+                    p.promo-block__text.js-copy__text Promocode
+                    button.btn.promo-block__btn 
+                        +icon("copy")
+                +button("btn--extra", "Get Bonus")
+        img(src=`img/${item.img}`, alt="")

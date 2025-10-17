@@ -1,0 +1,118 @@
+@use "../settings" as *;
+
+.bonus-banner {
+    align-self: stretch;
+    position: relative;
+    padding: 24px 210px 24px 24px;
+    border-radius: var(--card-radius, 16px);
+    background: var(--bonus-bg-orange, linear-gradient(180deg, #ff9f3f 0%, #ff720d 100%));
+    overflow: hidden;
+
+    color: var(--text-main, #fff);
+
+    flex-wrap: wrap;
+
+    &__content {
+        @include flex(column, flex-start, center, 6px);
+    }
+
+    &__block {
+        @include flex(row, center, flex-start, 8px);
+    }
+
+    &__type {
+        padding: 4px 12px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        margin-bottom: 6px;
+
+        font-weight: 600;
+        @include font-text-sm;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__type + .bonus-banner__title {
+        margin-top: auto;
+    }
+
+    &__title {
+        font-weight: 500;
+        @include font-display-xs;
+    }
+
+    &__descr {
+        @include font-text-md;
+    }
+
+    & > img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 230px;
+        max-height: 100%;
+    }
+
+    &--v2 {
+        padding: 20px 20px 20px 106px;
+        @include flex(row, center, space-between, 24px);
+
+        .bonus-banner__type {
+            padding: 0;
+            background: transparent;
+            font-weight: 400;
+            @include font-text-lg;
+        }
+
+        & > img {
+            left: 0;
+            right: unset;
+        }
+    }
+
+    @include media-max-sm {
+        padding: 16px 126px 16px 16px;
+        gap: 16px;
+
+        &__title {
+            font-weight: 600;
+            @include font-text-lg;
+        }
+
+        &__descr {
+            @include font-text-sm;
+        }
+
+        &__block {
+            flex-direction: column;
+            align-items: stretch;
+
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &--v2 {
+            padding: 16px;
+            gap: 4px;
+
+            .bonus-banner__title,
+            .bonus-banner__descr,
+            .bonus-banner__type {
+                text-align: center;
+            }
+
+            .bonus-banner__type {
+                margin-bottom: 0;
+            }
+            .bonus-banner__title {
+                @include font-text-xl;
+            }
+            .bonus-banner__block {
+                padding-left: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "bonusBanners": [
+        {
+            "grad": " var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
+            "type": "Welcome Bonus",
+            "title": "+100% on the first deposit",
+            "descr": "Deposit at least 0.50€ and receive the bonus",
+            "img": "bonus-banner-img-1.png"
+        },
+        {
+            "grad": "var(--bonus-bg-green, linear-gradient(180deg, #62C525 0%, #50A11E 100%));",
+            "type": "Cashback",
+            "title": "Weekly cashback up to 30%",
+            "descr": "Get back 30% of the funds lost during the week",
+            "img": "bonus-banner-img-2.png"
+        }
+    ]
+}
