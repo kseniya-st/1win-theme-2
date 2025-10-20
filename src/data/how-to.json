@@ -1,0 +1,48 @@
+{
+    "howTo": [
+        {
+            "step": "Step 1",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 2",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 3",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 4",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 5",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 6",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 7",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 8",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL.",
+            "btn": {
+                "modificator": "btn--primary",
+                "text": "Register"
+            }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "bonusCards": [
+        {
+            "img": "bonus-img.png",
+            "text": "<span>Welcome Bonus +100%</span> on the first deposit",
+            "btn": {
+                "modificator": "btn--extra",
+                "text": "Get Bonus"
+            }
+        },
+        {
+            "img": "bonus-img.png",
+            "text": "<span>Welcome Bonus +100% on the first deposit</span> on the first deposit",
+            "btn": {
+                "modificator": "btn--extra",
+                "text": "Get Bonus"
+            }
+        },
+        {
+            "img": "bonus-img.png",
+            "text": "<span>Welcome Bonus +100%</span> on the first deposit",
+            "btn": {
+                "modificator": "btn--extra",
+                "text": "Get Bonus"
+            }
+        },
+        {
+            "img": "bonus-img.png",
+            "text": "<span>Welcome Bonus +100%</span> on the first deposit",
+            "btn": {
+                "modificator": "btn--extra",
+                "text": "Get Bonus"
+            }
+        }
+    ]
+}
