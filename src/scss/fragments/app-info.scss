@@ -1,0 +1,162 @@
+@use "../settings" as *;
+
+.app-info {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    padding-top: 9px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &__wrap {
+        padding: 24px;
+        border-radius: var(--card-radius, 16px);
+        background: var(--card-bg, #1d1e21);
+        @include flex(row, center, flex-start, 24px);
+    }
+
+    &__block {
+        padding-left: 150px;
+        @include flex(row, center, flex-start, 24px);
+
+        & > img {
+            position: absolute;
+            top: -9px;
+            left: 25px;
+            object-position: center top;
+        }
+    }
+
+    &__descr {
+        @include flex(column, flex-start, flex-start, 8px);
+        color: var(--text-main, #fff);
+        @include font-text-md;
+
+        span {
+            font-weight: 600;
+            @include font-text-lg;
+        }
+    }
+
+    &__table {
+        flex: 1;
+
+        &-tbody {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        &-tr {
+            padding-left: 24px;
+            border-left: 1px solid var(--line-color, #353740);
+            @include flex(row, center, center);
+        }
+
+        &-td {
+            position: relative;
+            @include flex(column, flex-start, center, 2px);
+            padding-left: 60px;
+            min-height: 36px;
+
+            color: var(--text-secondary, #d2d2d2);
+            @include font-text-sm;
+
+            span {
+                color: var(--text-main, #fff);
+                font-weight: 500;
+                @include font-text-md;
+            }
+
+            img,
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    @include media-max-mlg {
+        padding: 0;
+
+        &__wrap {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        &__block {
+            position: relative;
+            padding-left: 0;
+            border-bottom: 1px solid var(--line-color, #353740);
+
+            & > img {
+                position: relative;
+                left: 0;
+                top: 0;
+                height: 99px;
+                width: 84px;
+                object-fit: cover;
+            }
+        }
+
+        &__table {
+            &-tbody {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &-tr {
+                padding-left: 0;
+                border-left: 0;
+                justify-content: flex-start;
+            }
+
+            &-td {
+                img,
+                svg {
+                    top: 0;
+                    transform: unset;
+                }
+            }
+        }
+    }
+
+    @include media-max-sm {
+        margin-top: 16px;
+
+        &__wrap {
+            gap: 16px;
+            padding: 16px;
+        }
+
+        &__block {
+            gap: 16px;
+        }
+
+        &__table {
+            &-tbody {
+                gap: 16px;
+            }
+
+            &-td {
+                min-height: 28px;
+                padding-left: 28px;
+                gap: 4px;
+
+                img,
+                svg {
+                    width: 28px;
+                    height: 28px;
+                    min-width: 28px;
+                }
+            }
+        }
+    }
+}

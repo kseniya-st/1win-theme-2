@@ -46,6 +46,15 @@
         }
     }
 
+    &__btns {
+        @include flex(row, stretch, flex-start, 8px);
+        flex-wrap: wrap;
+
+        .btn {
+            flex: 1 0 auto;
+        }
+    }
+
     .promo-block {
         width: clamp(100px, 310px, 100%);
         max-width: 100%;
