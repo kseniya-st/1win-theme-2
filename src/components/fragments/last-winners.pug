@@ -1,0 +1,8 @@
+include /layouts/base.pug
+ul.last-winners.js-scroll-list 
+    each item in latestWinners
+        li.last-winners__item
+            img(src=`${item.img}`, alt="")
+            p.last-winners__item-game= item.game 
+            span.last-winners__item-user= item.user 
+            span.last-winners__item-amount= item.amount 

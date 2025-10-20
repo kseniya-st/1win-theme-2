@@ -1,11 +1,11 @@
-//- @defaultData = tablev1, "table--v1", "Test", true
+//- @defaultData = table, true
 //- @mixin
-mixin table(table, className, title, isScroll)
-    .table(class=className)
-        if title 
-            p.table__title= title
-        .table__wrap.wp-block-table.js-scroll-list
-            table.table__block
+include /components/fragments/button.pug
+include /mixins/icons.pug
+mixin table(table,  isScroll)
+    if isScroll
+        .table.js-scroll-list(class=`${table.modificator ? table.modificator : ""}`)
+            table.wp-block-table
                 if table.thead 
                     thead 
                         each tr in table.thead 
@@ -15,6 +15,26 @@ mixin table(table, className, title, isScroll)
                 if table.tbody
                     tbody 
                         each tr in table.tbody 
-                            tr      
-                                each td in tr   
-                                    td(class=`${td.className ? td.className : ""}`)!= td.text
+                            tr
+                                each cell in tr
+                                    if cell.th
+                                        th(class=`${cell.modificator ? cell.modificator : ''}`)!= cell.th     
+                                    if cell.td
+                                        td(class=`${cell.modificator ? cell.modificator : ''}`)!= cell.td     
+    else 
+        table.wp-block-table(class=`${table.modificator ? table.modificator : ""}`)
+            if table.thead 
+                thead 
+                    each tr in table.thead 
+                        tr 
+                            each th in tr
+                                th(class=`${th.className ? th.className : ""}`)!= th.text
+            if table.tbody
+                tbody 
+                    each tr in table.tbody 
+                        tr 
+                            each cell in tr
+                                if cell.th
+                                    th(class=`${cell.modificator ? cell.modificator : ''}`)!= cell.th     
+                                if cell.td
+                                    td(class=`${cell.modificator ? cell.modificator : ''}`)!= cell.td   

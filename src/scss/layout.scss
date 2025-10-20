@@ -22,13 +22,6 @@
         }
     }
 
-    & > p:not([class]),
-    & > h2:not([class]),
-    & > h2.heading,
-    & > h1:not([class]) {
-        max-width: 1156px;
-    }
-
     &.with-btn {
         display: grid;
         grid-template-columns: 1fr auto;

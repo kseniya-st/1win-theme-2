@@ -9,6 +9,16 @@ h6 {
     @include font-text-xl;
 }
 
+h2 + :is(p:not([class]), ul:not([class]), ul.wp-block-list, ol:not([class]), ol.wp-block-list),
+.with-btn
+    > :is(p:not([class]), ul:not([class]), ul.wp-block-list, ol:not([class]), ol.wp-block-list) {
+    margin-top: 20px;
+
+    @include media-max-sm {
+        margin-top: 16px;
+    }
+}
+
 p:not([class]),
 ul:not([class]),
 ul.wp-block-list,

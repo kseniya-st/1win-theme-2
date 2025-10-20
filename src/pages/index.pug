@@ -38,12 +38,74 @@ html(lang="en")
                 ul.grid-block.grid-block--d7.grid-block--m2
                     each item in slotCards 
                         +slotCard(item)
-                        
 
-            section.wrapper
-                h2 Today IPL Match Prediction
-                include ../components/fragments/button.pug
-                +button('btn--outlined', 'Test')
+            section.wrapper.with-btn
+                h2 Live games              
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d7.grid-block--m2
+                    each item in slotCards 
+                        +slotCard(item)
+
+            section.wrapper 
+                h2 Latest winners
+                include ../components/fragments/last-winners.pug
+            
+            section.wrapper 
+                .content-img
+                    .content-img__content 
+                        h2 Discover 1win Casino in Argentina
+                        p 
+                            a(href="#") Lorem ipsum dolor
+                            |  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        +button('btn--primary', 'Register')
+                    img(src="img/content-img.png", alt="")
+                +table(table, false)
+
+            section.wrapper.with-btn 
+                h2 Bonuses
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                ul.grid-block.grid-block--d4 
+                    each item in bonusCards 
+                        +bonusCard(item)
+
+            section.wrapper 
+                .content-img
+                    .content-img__content 
+                        h2 Discover 1win Casino in Argentina
+                        p 
+                            a(href="#") 1win
+                            |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
+                        +button('btn--primary', 'Register')
+                    img(src="img/content-img.png", alt="")
+
+            section.wrapper 
+                +table(table1, true)
+
+            section.wrapper 
+                h2 How to
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +howTo(howTo)
+
+            section.wrapper 
+                h2 Discover 1win Casino in Argentina
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                h3 List
+                ul 
+                    li Bet on outcomes of virtual football matches;
+                    li Predict the winner of a virtual tennis match;
+                    li Bet on outcomes of virtual football matches;
+                ol 
+                    li Predict the winner of a virtual tennis match;
+                    li Stake on virtual basketball game results;
+                    li Choose which virtual dog will cross the finish line first and which will cross the other.
+                +button("btn--primary", "Register")
+
+            section.wrapper 
+                h2 Pros and cons
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +prosCons(prosCons)
 
             include ../components/blocks/section-faq.pug 
 

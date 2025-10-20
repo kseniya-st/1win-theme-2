@@ -1,239 +1,158 @@
 @use "../settings" as *;
 
-.table {
-    &.scrolling {
-        td,
-        th {
-            pointer-events: none;
-        }
+.scrolling .table {
+    td,
+    th {
+        pointer-events: none;
+        user-select: none;
     }
+}
 
-    &:not(:first-child) {
-        margin-top: 32px;
-    }
+.table.js-scroll-list {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    @include hideScrollbar;
 
-    &:not(:last-child) {
-        margin-bottom: 32px;
+    margin-top: 20px;
+
+    &:first-child {
+        margin-top: 0;
     }
 
     @include media-max-sm {
-        &:not(:first-child) {
-            margin-top: 28px;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 28px;
-        }
+        margin-top: 16px;
     }
 
-    &__title {
-        color: var(--secondary, #b4cea3);
-    }
-
-    &__odds {
-        border-radius: 8px;
-        background: var(--M3-sys-dark-secondary-container, #374d2c);
-        display: block;
-        width: 100px;
-        padding: 4px 16px;
-
-        @include media-max-sm {
-            width: 76px;
-            padding: 6px 16px;
-        }
-    }
-
-    &__wrap {
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        @include hideScrollbar;
-    }
-
-    &__block {
+    table {
+        table-layout: auto;
         min-width: 500px;
-    }
-
-    &.table--v1 {
-        .table__block {
-            border-spacing: 0 8px;
-            margin-block: 12px -8px;
-        }
-
-        th,
-        td {
-            @include tdPadding(16px, 32px, 32px);
-            user-select: none;
-
-            &:not(.align-left) {
-                text-align: center;
-            }
-        }
 
         thead {
-            tr {
-                td,
-                th {
-                    &:first-child {
-                        border-radius: 16px 0 0 8px;
-                    }
-                    &:last-child {
-                        border-radius: 0 16px 8px 0;
-                    }
-                }
-
-                background: var(--surface-container-highest, #32362f);
-            }
-            th {
-                height: 84px;
-            }
-        }
-
-        tbody {
-            tr {
-                @include trBorderRadius(8px);
-                background: var(--surface-container-low, #191d17);
-
-                &:last-child {
-                    td,
-                    th {
-                        &:first-child {
-                            border-radius: 8px 0 0 16px;
-                        }
-                        &:last-child {
-                            border-radius: 0 8px 16px 0;
-                        }
-                    }
-                }
-            }
-            td {
-                height: 80px;
-            }
-        }
-
-        @include media-max-sm {
-            th {
-                @include tdPadding(16px, 16px, 16px);
-            }
-            td {
-                @include tdPadding(8px, 16px, 16px);
-            }
-            thead th {
-                height: 54px;
-            }
-
-            tbody td {
-                height: 54px;
-            }
-
-            tbody tr {
-                &:last-child {
-                    td,
-                    th {
-                        &:first-child {
-                            border-radius: 8px 0 0 8px;
-                        }
-                        &:last-child {
-                            border-radius: 0 8px 8px 0;
-                        }
-                    }
-                }
-            }
-
-            thead tr {
-                td,
-                th {
-                    &:first-child {
-                        border-radius: 8px 0 0 8px;
-                    }
-                    &:last-child {
-                        border-radius: 0 8px 8px 0;
-                    }
-                }
-            }
+            white-space: nowrap;
         }
     }
+}
 
-    &.table--v2 {
-        .table__block {
-            border-spacing: 0 8px;
-            margin-block: -8px;
-            min-width: unset;
-        }
+table:not([class]),
+table.wp-block-table {
+    table-layout: fixed;
+    margin-top: 16px;
 
-        .cell {
-            @include flex(row, center, flex-start, 8px);
-
-            img,
-            svg {
-                @include maxSize(48px, 48px);
-            }
-        }
-
-        .btn {
-            width: 100%;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        tbody {
-            tr {
-                td,
-                th {
-                    &:first-child {
-                        border-radius: 16px 0 0 8px;
-                    }
-                    &:last-child {
-                        border-radius: 0 16px 8px 0;
-                    }
-                }
-
-                &:last-child {
-                    td {
-                        &:first-child {
-                            border-radius: 8px 0 0 16px;
-                        }
-                        &:last-child {
-                            border-radius: 0 8px 16px 0;
-                        }
-                    }
-                }
-                background: var(--surface-container-low, #191d17);
-            }
-            td {
-                @include tdPadding(16px, 32px, 32px);
-            }
-        }
-
-        @include media-max-sm {
-            .cell {
-                img,
-                svg {
-                    @include maxSize(32px, 32px);
-                }
-            }
-
-            tbody {
-                td {
-                    @include tdPadding(8px, 16px, 10px);
-                    &:first-child {
-                        display: none;
-                    }
-                    &:nth-child(2) {
-                        border-radius: 8px 0 0 8px;
-                        padding-left: 16px;
-                    }
-                }
-            }
-        }
+    &:first-child {
+        margin-top: 0;
     }
 
-    .align-left {
+    td,
+    th {
         text-align: left;
+        position: relative;
+        @include tdPadding(16px, 16px, 24px);
+        vertical-align: middle;
+        color: var(--text-secondary, #d2d2d2);
+        @include font-text-md;
     }
 
-    .text-label {
+    th {
+        color: var(--text-main, #fff);
+    }
+
+    thead {
+        th {
+            padding-bottom: 20px;
+            font-weight: 600;
+            @include font-text-lg;
+
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                height: calc(100% - 4px);
+                width: 100%;
+                background: var(--card-secondary-bg, #27292d);
+            }
+            &:first-child::before {
+                border-radius: var(--card-radius, 16px) 0 0 var(--card-radius, 16px);
+            }
+            &:last-child::before {
+                border-radius: 0 var(--card-radius, 16px) var(--card-radius, 16px) 0;
+            }
+        }
+    }
+
+    tbody {
+        td,
+        th {
+            background: var(--card-bg, #1d1e21);
+        }
+
+        tr:first-child {
+            td,
+            th {
+                &:first-child {
+                    border-radius: var(--card-radius, 16px) 0 0 0;
+                }
+                &:last-child {
+                    border-radius: 0 var(--card-radius, 16px) 0 0;
+                }
+            }
+        }
+
+        tr:last-child {
+            td,
+            th {
+                &:first-child {
+                    border-radius: 0 0 0 var(--card-radius, 16px);
+                }
+                &:last-child {
+                    border-radius: 0 0 var(--card-radius, 16px) 0;
+                }
+            }
+        }
+
+        th {
+            font-weight: 500;
+        }
+
+        tr:not(:last-child) {
+            td,
+            th {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background: var(--line-color, #353740);
+                }
+
+                &:first-child::before {
+                    left: 16px;
+                    width: calc(100% - 16px);
+                }
+                &:last-child::before {
+                    width: calc(100% - 16px);
+                }
+            }
+        }
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    img,
+    svg {
+        max-width: 100px;
+        max-height: 100px;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+
+    @include media-max-sm {
+        margin-top: 16px;
     }
 }

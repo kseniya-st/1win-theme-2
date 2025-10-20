@@ -1,0 +1,71 @@
+@use "../settings" as *;
+
+.last-winners {
+    @include flex(row, flex-start, flex-start, 12px);
+    overflow-x: auto;
+
+    @include hideScrollbar;
+
+    margin-top: 20px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &__item {
+        position: relative;
+        min-width: 154px;
+        margin-top: 32px;
+        padding: 12px;
+        border-radius: var(--card-radius, 16px);
+        background: var(--card-bg, #1d1e21);
+        @include flex(column, center, flex-start);
+
+        & > img {
+            width: 122px;
+            height: 78px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: calc(-32px - 12px);
+            margin-bottom: 12px;
+        }
+
+        &-game {
+            color: var(--text-main, #fff);
+            text-align: center;
+            font-weight: 600;
+            @include font-text-sm;
+        }
+
+        &-user {
+            margin-block: 2px 8px;
+            color: var(--text-secondary, #d2d2d2);
+            text-align: center;
+            @include font-text-xs;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-amount {
+            margin-top: auto;
+            color: var(--accent-base, #0051ff);
+            text-align: center;
+            font-weight: 600;
+            @include font-text-md;
+        }
+    }
+
+    @include media-max-sm {
+        margin-top: 16px;
+        gap: 16px;
+    }
+}
+
+.scrolling {
+    .last-winners__item {
+        user-select: none;
+        pointer-events: none;
+    }
+}
