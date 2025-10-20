@@ -1,11 +1,10 @@
 include /layouts/base.pug
-section.wrapper.section-faq
-    .section.faq__col
-        h2 FAQs
-        .section-faq__list
-            each item in faq 
-                details.section-faq__item 
-                    summary= item.quest
-                        +icon("test2")
-                    p= item.answer
-        +prosCons(prosCons)
+section.wrapper
+    h2 FAQs
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    .section-faq
+        each item in faq 
+            details.section-faq__item 
+                summary= item.quest
+                    +icon("arrow-down")
+                p= item.answer

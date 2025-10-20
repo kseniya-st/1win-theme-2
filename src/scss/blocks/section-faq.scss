@@ -2,43 +2,38 @@
 
 .section-faq {
     display: grid;
-    grid-template-columns: 1fr 588px;
-    column-gap: 20px;
-    row-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
 
-    @include media-max-lg {
-        grid-template-columns: 1fr 1fr;
-    }
+    margin-top: 20px;
 
-    @include media-max-mlg {
-        grid-template-columns: 1fr;
+    &:first-child {
+        margin-top: 0;
     }
 
     @include media-max-sm {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 28px;
-    }
-
-    &__list {
-        @include flex(column, stretch, flex-start, 8px);
-        flex: 1;
+        margin-top: 16px;
+        grid-template-columns: 1fr;
     }
 
     &__item {
-        @include relative();
-        &:not(:first-child) {
-            border-top: 1px solid #43483e;
-        }
+        @include relative;
+        border-radius: var(--card-radius, 16px);
+
+        background: var(--card-bg, #1d1e21);
+        @include transition(background);
 
         p {
-            margin-block: 8px;
+            margin: 8px 16px 0 52px;
         }
 
         &[open] {
+            background: var(--card-secondary-bg, #27292d);
+            padding-bottom: 16px;
             summary {
+                padding-bottom: 0;
                 svg {
-                    transform: translate(0, -50%) rotate(-180deg);
+                    transform: rotate(-180deg);
                 }
             }
         }
@@ -46,15 +41,14 @@
 
     summary {
         @include relative();
-        @include flex(row, center, space-between, 8px);
-        min-height: 64px;
+        @include flex(row, center, space-between, 16px);
 
-        padding: 8px 0;
-        padding-right: 48px;
-
+        padding: 16px 16px 16px 52px;
         cursor: pointer;
-
         list-style: none;
+
+        color: var(--text-main, #fff);
+        @include font-text-lg-m;
 
         &::marker {
             content: "";
@@ -64,51 +58,17 @@
             display: none;
         }
 
-        &::after {
-            content: "";
-            @include absolute(50%, $right: 4px);
-
-            transform: translate(0, -50%);
-            @include size(40px, 40px);
-
-            border-radius: 50%;
-            pointer-events: none;
-
-            @include transition(background);
-        }
-
-        @include hover {
-            &::after {
-                background: var(--on-surface-variant-opacity-008, rgba(202, 196, 208, 0.08));
-            }
-        }
-
-        @include active {
-            &::after {
-                background: var(--on-surface-variant-opacity-012, rgba(202, 196, 208, 0.12));
-            }
+        &::before {
+            content: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="%23fff"><path d="M1.4 14C1.4 7.042 7.042 1.4 14 1.4c6.96 0 12.6 5.642 12.6 12.6 0 6.96-5.64 12.6-12.6 12.6-6.958 0-12.6-5.64-12.6-12.6"/></mask><path d="M1.4 14C1.4 7.042 7.042 1.4 14 1.4c6.96 0 12.6 5.642 12.6 12.6 0 6.96-5.64 12.6-12.6 12.6-6.958 0-12.6-5.64-12.6-12.6" fill="%230051FF"/><path d="M1.4 1.4h25.2zm25.2 14C26.6 22.36 20.96 28 14 28 7.042 28 1.4 22.36 1.4 15.4V14c0 6.186 5.642 11.2 12.6 11.2 6.96 0 12.6-5.014 12.6-11.2zM1.4 26.6V1.4zM26.6 1.4v25.2z" fill="%23fff" mask="url(%23a)"/><path d="M14.754 6.716A4.2 4.2 0 0 0 9.8 10.85a1.05 1.05 0 1 0 2.1 0 2.1 2.1 0 0 1 3.585-1.484c.299.298.502.68.584 1.094a2.1 2.1 0 0 1-1.05 2.231 3.83 3.83 0 0 0-2.07 3.41A1.01 1.01 0 0 0 14 17.104a1.09 1.09 0 0 0 1.05-1.096 1.73 1.73 0 0 1 .977-1.478 4.201 4.201 0 0 0-1.273-7.815m-.732 12.534h-.01a1.055 1.055 0 1 0 .01 0" fill="%23fff"/></svg>');
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 16px;
+            left: 16px;
         }
 
         svg {
-            @include absolute(50%, $right: 0);
-            transform: translate(0, -50%);
-
-            @include minSize(48px, 48px);
-            @include size(48px, 48px);
             @include transition(transform);
-        }
-
-        @include media-max-sm {
-            padding-block: 0;
-            min-height: 48px;
-        }
-    }
-
-    .join-form {
-        margin-top: 59px;
-
-        @include media-max-mlg {
-            margin-top: 0;
         }
     }
 }
