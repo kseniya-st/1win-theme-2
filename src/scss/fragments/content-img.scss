@@ -1,0 +1,75 @@
+@use "../settings" as *;
+
+.content-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    margin-top: 24px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    & > *:only-child {
+        grid-column: 1 / -1;
+    }
+    .btn {
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+    }
+
+    &__content {
+        grid-column: span 1;
+    }
+
+    img {
+        width: 100%;
+        grid-column: span 1;
+
+        margin: 0;
+
+        &:not(:first-child) {
+            margin: 0;
+        }
+    }
+
+    &--reversed {
+        .content-img__content {
+            order: 1;
+        }
+        img {
+            order: -1;
+        }
+    }
+
+    @include media-max-mlg {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+
+        & > img {
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    @include media-max-sm {
+        margin-top: 20px;
+        gap: 20px;
+
+        .btn {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+    }
+}

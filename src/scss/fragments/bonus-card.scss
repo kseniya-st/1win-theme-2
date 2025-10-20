@@ -1,0 +1,46 @@
+@use "../settings" as *;
+
+.bonus-card {
+    align-self: stretch;
+    @include flex(column, center, flex-start, 16px);
+
+    padding: 16px;
+    border-radius: var(--card-radius, 16px);
+    background: var(--bonus-bg-orange, linear-gradient(180deg, #ff9f3f 0%, #ff720d 100%));
+
+    &:nth-of-type(4n + 2) {
+        background: var(--bonus-bg-purple, linear-gradient(180deg, #c34dff 0%, #ab12f8 100%));
+    }
+    &:nth-of-type(4n + 3) {
+        background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
+    }
+    &:nth-of-type(4n + 4) {
+        background: var(--bonus-bg-blue, linear-gradient(180deg, #63abff 0%, #0075ff 100%));
+    }
+
+    & > img {
+        margin-block: -13px -4px;
+        width: calc(100% + 13px * 2);
+        max-width: calc(100% + 13px * 2);
+        margin-inline: -13px;
+        max-height: 160px;
+    }
+
+    color: var(--text-main, #fff);
+    text-align: center;
+    @include font-text-md;
+
+    & > span {
+        margin-bottom: -10px;
+        font-weight: 500;
+        @include font-display-xs;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: auto;
+    }
+
+    @include media-max-sm {
+    }
+}

@@ -1,0 +1,53 @@
+@use "../settings" as *;
+
+.how-to {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px 16px;
+
+    &__item {
+        @include flex(column, stretch, flex-start, 8px);
+    }
+
+    &__step {
+        width: 100%;
+        padding: 2px 12px;
+        border-radius: 36px;
+        background: var(--card-secondary-bg, #27292d);
+
+        color: var(--text-main, #fff);
+        text-align: center;
+        text-align: center;
+        @include font-text-lg-m;
+    }
+
+    &__content {
+        flex: 1;
+        @include flex(column, stretch, flex-start, 8px);
+        padding: 16px;
+        border-radius: var(--card-radius, 16px);
+        background: var(--card-bg, #1d1e21);
+
+        & > img,
+        & > .btn {
+            margin-top: 8px;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: var(--text-main, #fff);
+        font-weight: 600;
+        @include font-text-xl;
+    }
+
+    &__descr {
+        color: var(--text-secondary, #d2d2d2);
+        @include font-text-md;
+    }
+
+    @include media-max-sm {
+        gap: 16px;
+        grid-template-columns: 1fr;
+    }
+}

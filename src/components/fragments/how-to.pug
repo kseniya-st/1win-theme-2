@@ -1,0 +1,14 @@
+//- @defaultData = howTo
+//- @mixin
+mixin howTo(data)
+    ol.how-to
+        each item in data
+            li.how-to__item
+                .how-to__step= item.step 
+                .how-to__content 
+                    h3.how-to__title= item.title
+                    p.how-to__descr= item.descr
+                    if item.btn 
+                        +button(item.btn.modificator, item.btn.text)
+                    if item.img 
+                        img(src=`img/${item.img}`, alt="")

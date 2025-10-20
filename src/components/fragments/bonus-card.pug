@@ -1,0 +1,8 @@
+//- @defaultData = bonusCards[0]
+//- @mixin
+include /components/fragments/button.pug
+mixin bonusCard(item)
+    li.bonus-card 
+        img(src=`img/${item.img}`, alt="")
+        != item.text
+        +button(item.btn.modificator, item.btn.text)

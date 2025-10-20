@@ -1,0 +1,51 @@
+@use "../settings" as *;
+
+.app-banner {
+    width: 411px;
+    max-width: 100%;
+
+    padding: 16px;
+    border-radius: var(--card-radius, 16px);
+    background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
+
+    @include flex(row, flex-start, flex-start, 16px);
+
+    & > img {
+        align-self: flex-end;
+        margin-bottom: -16px;
+    }
+
+    &__content {
+        @include flex(column, flex-start, flex-start, 16px);
+
+        & > .btn {
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        @include flex(column, flex-start, flex-start, 8px);
+
+        color: var(--text-main, #fff);
+
+        span {
+            font-weight: 600;
+            @include font-text-lg;
+        }
+    }
+
+    @include media-max-sm {
+        gap: 8px;
+        &__title {
+            gap: 4px;
+            @include font-text-sm;
+            span {
+                @include font-text-md;
+            }
+        }
+
+        &__content {
+            gap: 12px;
+        }
+    }
+}
