@@ -2,39 +2,15 @@
     "footerMenu": [
         [
             {
-                "link": "#",
-                "title": "Casinos",
-                "class": "footer__nav-title"
+                "title": "Menu"
             },
             {
                 "link": "#",
-                "title": "Online Casinos"
+                "title": "Application"
             },
             {
                 "link": "#",
-                "title": "No deposit Casinos"
-            },
-            {
-                "link": "#",
-                "title": "Live Casinos"
-            },
-            {
-                "link": "#",
-                "title": "Projects"
-            },
-            {
-                "link": "#",
-                "title": "New Casinos"
-            }
-        ],
-        [
-            {
-                "title": "Online Casinos",
-                "class": "footer__nav-title"
-            },
-            {
-                "link": "#",
-                "title": "StayCasino"
+                "title": "Bonus"
             },
             {
                 "link": "#",
@@ -42,90 +18,56 @@
             },
             {
                 "link": "#",
-                "title": "Slotman"
-            },
-            {
-                "link": "#",
-                "title": "PlayAmo"
+                "title": "Casino"
             }
         ],
         [
             {
-                "link": "#",
-                "title": "Best Casino Bonuses",
-                "class": "footer__nav-title"
+                "title": "Information"
             },
             {
                 "link": "#",
-                "title": "Online Casinos"
+                "title": "Rules"
             },
             {
                 "link": "#",
-                "title": "No deposit Casinos"
+                "title": "Promotions"
             },
             {
                 "link": "#",
-                "title": "Live Casinos"
-            },
-            {
-                "link": "#",
-                "title": "Projects"
-            },
-            {
-                "link": "#",
-                "title": "New Casinos"
+                "title": "Partner Program"
             }
         ],
         [
             {
-                "link": "#",
-                "title": "Gambling Sites",
-                "class": "footer__nav-title"
+                "title": "Contacts"
             },
             {
-                "link": "#",
-                "title": "Online Casinos"
+                "link": "mailto:support@1win.xyz",
+                "title": "support@1win.xyz"
             },
             {
-                "link": "#",
-                "title": "No deposit Casinos"
+                "link": "mailto:security@1win.xyz",
+                "title": "security@1win.xyz"
             },
             {
-                "link": "#",
-                "title": "Live Casinos"
+                "link": "mailto:business@1win.xyz",
+                "title": "business@1win.xyz"
             },
             {
-                "link": "#",
-                "title": "Projects"
-            },
-            {
-                "link": "#",
-                "title": "New Casinos"
+                "link": "mailto:partner@1win.xyz",
+                "title": "partner@1win.xyz"
             }
         ]
     ],
     "footerLogos": [
-        "img/footer-logo-1.png",
-        "img/footer-logo-2.png",
-        "img/footer-logo-3.png",
-        "img/footer-logo-4.png"
-    ],
-    "footerLinks": [
-        {
-            "name": "Problems",
-            "link": "#"
-        },
-        {
-            "name": "Privat Policy",
-            "link": "#"
-        },
-        {
-            "name": "Sitemap",
-            "link": "#"
-        },
-        {
-            "name": "FAQ",
-            "link": "#"
-        }
+        "img/logos-1.png",
+        "img/logos-2.png",
+        "img/logos-3.png",
+        "img/logos-4.png",
+        "img/logos-5.png",
+        "img/logos-6.png",
+        "img/logos-7.png",
+        "img/18+.png"
     ]
 }
