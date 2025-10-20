@@ -3,6 +3,7 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width")
     title app page
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
     link(rel="stylesheet",  href=cssPath)
     body
@@ -21,12 +22,18 @@ html(lang="en")
                 img(src="img/section-hero-2.png", alt="")
                 include ../components/fragments/app-info.pug
 
-
-            section.wrapper 
-                include ../components/fragments/links-block.pug
-
             section.wrapper 
                 include ../components/fragments/toc-section.pug
+
+            section.wrapper 
+                h2 Discover 1win Casino in Argentina
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +table(table, false)
+
+            section.wrapper 
+                h2 Screenshots
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +gallery(gallery)
 
             section.wrapper.with-btn
                 h2 Sport Categories
@@ -124,5 +131,6 @@ html(lang="en")
         include ../components/fragments/mob-btn.pug
         +mobBtn(mobBtn)
 
+        script(src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
         script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
         script(src=jsPath, type=jsType ? 'module' : undefined)

@@ -1,0 +1,77 @@
+@use "../settings" as *;
+
+.gallery {
+    margin-top: 20px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    overflow-x: auto;
+    @include flex(row, stretch, flex-start, 16px);
+
+    @include hideScrollbar;
+
+    img,
+    video {
+        user-select: none;
+        pointer-events: none;
+        max-height: 600px;
+        object-fit: contain;
+    }
+
+    &__item {
+        max-width: 100%;
+        &--video {
+            .gallery__item-link {
+                &::after {
+                    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M25 0C11.188 0 0 11.188 0 25c0 13.813 11.188 25 25 25 13.813 0 25-11.187 25-25C50 11.188 38.813 0 25 0m-5 36.25v-22.5L35 25z" fill="%23fff"/></svg>');
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background-color: #0b121bcc;
+                    border-radius: var(--card-radius, 16px);
+                }
+            }
+        }
+
+        &-link {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            @include size(max-content);
+            @include maxSize(100%);
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        @include media-max-sm {
+            &--video {
+                .gallery__item-link {
+                    &::after {
+                        transform-origin: center;
+                        transform: translate(-50%, -50%) scale(calc(40 / 50));
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-max-sm {
+        margin-top: 16px;
+        img,
+        video {
+            max-height: 410px;
+        }
+    }
+}

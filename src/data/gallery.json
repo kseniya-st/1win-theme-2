@@ -1,0 +1,18 @@
+{
+    "gallery": {
+        "id": "gallery",
+        "list": [
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            { "modificator": "", "img": "phone.png", "link": "phone.png" },
+            {
+                "modificator": "gallery__item--video",
+                "img": "phone.png",
+                "link": "video.mp4"
+            }
+        ]
+    }
+}
