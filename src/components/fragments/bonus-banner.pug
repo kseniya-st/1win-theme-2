@@ -5,12 +5,15 @@ mixin bonusBanner(item)
         .bonus-banner__content 
             p.bonus-banner__type= item.type 
             p.bonus-banner__title= item.title
-            p.bonus-banner__descr= item.descr
-        if item.promo 
-            .bonus-banner__block 
-                .promo-block.js-copy
-                    p.promo-block__text.js-copy__text Promocode
-                    button.btn.promo-block__btn 
-                        +icon("copy")
-                +button("btn--extra", "Get Bonus")
+            if item.descr
+                p.bonus-banner__descr= item.descr
+        if item.promo || item.btn 
+            .bonus-banner__block
+                if item.promo 
+                    .promo-block.js-copy
+                        p.promo-block__text.js-copy__text Promocode
+                        button.btn.promo-block__btn 
+                            +icon("copy")
+                if item.btn
+                    +button("btn--extra", "Get Bonus")
         img(src=`img/${item.img}`, alt="")

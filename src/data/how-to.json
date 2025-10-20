@@ -44,5 +44,59 @@
                 "text": "Register"
             }
         }
+    ],
+    "howTo1": [
+        {
+            "step": "Step 1",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 2",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 3",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 4",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 5",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 6",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 7",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL."
+        },
+        {
+            "step": "Step 8",
+            "img": "how-to.png",
+            "title": "Visit the 1win website",
+            "descr": "Open your preferred web browser and enter the official 1win website URL.",
+            "btn": {
+                "modificator": "btn--primary",
+                "text": "Register"
+            }
+        }
     ]
 }

@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width")
-    title app page
+    title casino page
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
     link(rel="stylesheet",  href=cssPath)
@@ -14,66 +14,41 @@ html(lang="en")
             section.wrapper.section-hero
                 .section-hero__wrap 
                     .section-hero__block 
-                        h1 The 1win app for Argentina: your ideal betting option
+                        h1 The best 1win Argentina bonuses: discover them!
                         p Discover 1win Argentina, an online betting and casino platform with a wide range of games and exciting betting opportunities. 1win is a secure and easy-to-use platform that offers users exciting 1win casino games. From live betting to popular slots, 1win offers quality entertainment for all players.
-                        .section-hero__btns
-                            +button("btn--primary", "Download for Android", "android")
-                            +button("btn--extra", "Download for iOS", "ios")
-                img(src="img/section-hero-2.png", alt="")
-                include ../components/fragments/app-info.pug
+                        +button("btn--primary", "Get Bonus")
+                img(src="img/section-hero.png" alt="")
 
             section.wrapper 
                 include ../components/fragments/toc-section.pug
 
-            section.wrapper 
-                h2 Discover 1win Casino in Argentina
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                +table(table, false)
-
-            section.wrapper 
-                h2 Screenshots
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                +gallery(gallery)
-
-            section.wrapper 
-                h2 Discover 1win Casino in Argentina
-                .content-img
-                    .content-img__content  
-                        p 
-                            a(href="#") 1win
-                            |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
-                        +button("btn--primary", "Download for Android", "android")
-                    img(src="img/content-img.png", alt="")
-
-            section.wrapper 
-                +table(table1, true)
-
-            section.wrapper 
-                h2 How to
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                +howTo(howTo1)
-
-            section.wrapper 
-                h2 Discover 1win Casino in Argentina
-                .content-img
-                    .content-img__content  
-                        p 
-                            a(href="#") 1win
-                            |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
-                        +button("btn--primary", "Download for Android", "android")
-                    img(src="img/content-img.png", alt="")
-
-            section.wrapper 
-                +table(table1, true)
-
-
-            section.wrapper.with-btn 
-                h2 Bonuses
+            section.wrapper.with-btn
+                h2 Casino games               
                 +button("btn--tertiary btn--small", "View All", null, "right-arrow")
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                ul.grid-block.grid-block--d4 
-                    each item in bonusCards 
-                        +bonusCard(item)    
+                ul.grid-block.grid-block--d7.grid-block--m2
+                    each item in slotCards 
+                        +slotCard(item)
+
+            section.wrapper.with-btn
+                h2 Live games              
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d7.grid-block--m2
+                    each item in slotCards 
+                        +slotCard(item)
+
+            section.wrapper 
+                h2 Latest winners
+                include ../components/fragments/last-winners.pug
+
+            section.wrapper 
+                .content-img
+                    .content-img__content 
+                        h2 Discover 1win Casino in Argentina
+                        p 
+                            a(href="#") 1win
+                            |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
+                        +button('btn--primary', 'Register')
+                    img(src="img/content-img.png", alt="")
 
             section.wrapper 
                 h2 Discover 1win Casino in Argentina

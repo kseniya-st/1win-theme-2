@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    title betting page
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet",  href=cssPath)
+    body
+        include /layouts/base.pug
+        include ../components/blocks/header.pug
+
+        main
+            section.wrapper.section-hero
+                .section-hero__wrap 
+                    .section-hero__block 
+                        h1 The best 1win Argentina bonuses: discover them!
+                        p Discover 1win Argentina, an online betting and casino platform with a wide range of games and exciting betting opportunities. 1win is a secure and easy-to-use platform that offers users exciting 1win casino games. From live betting to popular slots, 1win offers quality entertainment for all players.
+                        +button("btn--primary", "Get Bonus")
+                img(src="img/section-hero.png" alt="")
+
+            section.wrapper 
+                include ../components/fragments/toc-section.pug
+
+            section.wrapper.with-btn
+                h2 Sport Categories
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d5.grid-block--fit 
+                    each item in categories 
+                        +categoryCard(item)
+
+            section.wrapper.with-btn
+                h2 Betting Events               
+                +button("btn--tertiary btn--small", "View All", null, "right-arrow")
+                ul.grid-block.grid-block--d5
+                    each item in eventCards 
+                        +eventCard(item)
+
+            section.wrapper 
+                h2 How to
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +howTo(howTo1)
+
+            section.wrapper 
+                h2 Discover 1win Casino in Argentina
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                h3 List
+                ul 
+                    li Bet on outcomes of virtual football matches;
+                    li Predict the winner of a virtual tennis match;
+                    li Bet on outcomes of virtual football matches;
+                ol 
+                    li Predict the winner of a virtual tennis match;
+                    li Stake on virtual basketball game results;
+                    li Choose which virtual dog will cross the finish line first and which will cross the other.
+                +button("btn--primary", "Register")
+            
+            section.wrapper 
+                +table(table1, true)
+
+            section.wrapper 
+                h2 Pros and cons
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +prosCons(prosCons)
+
+            include ../components/blocks/section-faq.pug 
+
+        include ../components/fragments/go-up.pug
+        include ../components/blocks/footer.pug
+        include ../components/fragments/mob-btn.pug
+        +mobBtn(mobBtn)
+
+        script(src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        script(src=jsPath, type=jsType ? 'module' : undefined)

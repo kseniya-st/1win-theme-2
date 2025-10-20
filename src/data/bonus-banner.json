@@ -1,5 +1,5 @@
 {
-    "bonusBanners": [
+    "bonusBanner": [
         {
             "grad": " var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
             "type": "Welcome Bonus",
@@ -14,5 +14,13 @@
             "descr": "Get back 30% of the funds lost during the week",
             "img": "bonus-banner-img-2.png"
         }
-    ]
+    ],
+    "bonusBanner2": {
+        "modificator":"bonus-banner--v2",
+        "grad": " var(--bonus-bg-fillet, linear-gradient(180deg, #9A4AFF 0%, #7100FF 100%));",
+        "type": "Welcome Bonus",
+        "title": "+100% on the first deposit",
+        "img": "bonus-banner-img-3.png",
+        "btn": true
+    }
 }
