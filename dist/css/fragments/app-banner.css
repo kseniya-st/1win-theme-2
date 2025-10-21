@@ -1,0 +1,63 @@
+.app-banner {
+  width: 411px;
+  max-width: 100%;
+  padding: 16px;
+  border-radius: var(--card-radius, 16px);
+  background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.app-banner > img {
+  align-self: flex-end;
+  margin-bottom: -16px;
+  width: 164px;
+  height: 144px;
+  object-fit: cover;
+  object-position: center top;
+}
+.app-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.app-banner__content > .btn {
+  margin-top: auto;
+}
+.app-banner__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  color: var(--text-main, #fff);
+}
+.app-banner__title span {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+@media (max-width: 575.9px) {
+  .app-banner {
+    gap: 8px;
+  }
+  .app-banner > img {
+    max-width: 103px;
+  }
+  .app-banner__title {
+    gap: 4px;
+    font-size: 0.875rem;
+    line-height: 150%;
+  }
+  .app-banner__title span {
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  .app-banner__content {
+    gap: 12px;
+  }
+}

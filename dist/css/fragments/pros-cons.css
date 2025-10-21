@@ -1,0 +1,59 @@
+.pros-cons {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-top: 20px;
+}
+.pros-cons:first-child {
+  margin-top: 0;
+}
+@media (max-width: 575.9px) {
+  .pros-cons {
+    margin-top: 16px;
+    flex-direction: column;
+  }
+}
+.pros-cons__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.pros-cons__item--cons .pros-cons__list li:before {
+  content: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="%23fff"><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11"/></mask><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11" fill="%23FF0048"/><path d="M0 0h22zm22 12c0 6.075-4.925 11-11 11S0 18.075 0 12v-1c0 5.523 4.925 10 11 10s11-4.477 11-10zM0 22V0zM22 0v22z" fill="%23fff" mask="url(%23a)"/><path d="M6.05 11h9.9" stroke="%23fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.pros-cons__title {
+  position: relative;
+  padding: 12px 16px;
+  border-radius: var(--card-radius, 16px);
+  background: var(--card-bg, #1d1e21);
+  text-transform: uppercase;
+  color: var(--text-main, #fff);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+.pros-cons__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.pros-cons__list li {
+  position: relative;
+  padding-left: 30px;
+  min-height: 22px;
+}
+.pros-cons__list li::before {
+  content: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="%23fff"><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11"/></mask><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11" fill="%2300B24B"/><path d="M0 0h22zm22 12c0 6.075-4.925 11-11 11S0 18.075 0 12v-1c0 5.523 4.925 10 11 10s11-4.477 11-10zM0 22V0zM22 0v22z" fill="%23fff" mask="url(%23a)"/><path d="M11 6.05v9.9M6.05 11h9.9" stroke="%23fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+}

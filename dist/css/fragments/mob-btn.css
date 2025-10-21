@@ -1,0 +1,76 @@
+.mob-btn {
+  position: sticky;
+  left: 16px;
+  bottom: 16px;
+  z-index: 30;
+  width: calc(100% - 32px);
+  padding: 8px;
+  border-radius: var(--button-radius, 12px);
+  overflow: hidden;
+  background: var(--bonus-bg-orange, linear-gradient(180deg, #ff9f3f 0%, #ff720d 100%));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mob-btn:has(> img) {
+  padding-left: 50px;
+}
+.mob-btn > img, .mob-btn > svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 163px;
+  max-height: 49px;
+  z-index: -1;
+}
+.mob-btn .btn {
+  margin-left: auto;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-weight: 500;
+  overflow: visible;
+}
+.mob-btn .btn:has(img) {
+  padding-right: 61px;
+}
+.mob-btn .btn:has(img) img {
+  position: absolute;
+  right: 11px;
+  bottom: 0;
+  width: 40px;
+  height: 43px;
+  object-fit: contain;
+}
+.mob-btn__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-main, #fff);
+}
+.mob-btn__text {
+  font-size: 0.75rem;
+  line-height: 150%;
+}
+.mob-btn__title {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+.mob-btn__title span {
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 800;
+}
+.mob-btn--v2 {
+  padding: 8px 12px;
+  background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
+}
+@media (min-width: 576px) {
+  .mob-btn {
+    display: none;
+  }
+}

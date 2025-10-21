@@ -1,0 +1,70 @@
+.more-block {
+  position: relative;
+  align-self: stretch;
+  margin-left: 8px;
+}
+.more-block::after {
+  content: "";
+  width: calc(100% + 20px);
+  height: 24px;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  transform: translate(0, -4px);
+  display: none;
+}
+.more-block__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 100%;
+  min-width: 50px;
+  cursor: pointer;
+  border-radius: var(--button-radius, 12px);
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.more-block__btn::before, .more-block__btn::after {
+  content: "";
+}
+@media (any-hover: hover) {
+  .more-block__btn:hover {
+    background: var(--card-secondary-bg, #27292d);
+  }
+}
+@media (any-hover: none) and (pointer: coarse) {
+  .more-block__btn:active {
+    background: var(--card-secondary-bg, #27292d);
+  }
+}
+.more-block__circle, .more-block__btn::before, .more-block__btn::after {
+  border-radius: 50%;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--On-Surface, #f4f8fd);
+}
+.more-block .more-block__dropdown {
+  max-width: 250px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 16px);
+}
+.more-block .more-block__dropdown > .submenu {
+  display: flex;
+  width: max-content;
+  top: 0;
+}
+@media (any-hover: hover) {
+  .more-block:hover::after {
+    display: block;
+  }
+  .more-block:hover .more-block__dropdown {
+    display: flex;
+  }
+}

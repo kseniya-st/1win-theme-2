@@ -1,0 +1,47 @@
+.link-block {
+  align-self: stretch;
+}
+.link-block__link {
+  height: 100%;
+  padding: 16px;
+  border-radius: var(--card-radius, 16px);
+  background: var(--card-bg, #1d1e21);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  color: var(--text-main, #fff);
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+.link-block__link img {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.link-block__link::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m7.5 15 5-5-5-5" stroke="%23fff" stroke-width="2" stroke-linecap="round"/></svg>');
+  min-width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+}
+.link-block__link:active {
+  background: var(--card-secondary-bg, #27292d);
+}
+@media (any-hover: hover) {
+  .link-block__link:hover {
+    background: var(--card-secondary-bg, #27292d);
+  }
+  .link-block__link:focus {
+    background: var(--card-secondary-bg, #27292d);
+  }
+}
