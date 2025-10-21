@@ -23,10 +23,17 @@
     }
 
     &__block {
-        @include flex(row, center, flex-start, 8px);
+        @include flex(row, center, flex-end, 8px);
         flex: 1;
         & > .btn {
-            flex: 1 0 auto;
+            &:not(:only-child) {
+                flex: 1 0 auto;
+            }
+
+            &:only-child {
+                width: 244px;
+                max-width: 100%;
+            }
         }
     }
 
@@ -103,6 +110,16 @@
             & > * {
                 width: 100%;
             }
+
+            & > .btn {
+                &:only-child {
+                    width: 100%;
+                }
+            }
+        }
+
+        & > img {
+            max-width: 180px;
         }
 
         &--v2 {
@@ -123,12 +140,19 @@
 
             .bonus-banner__type {
                 margin-bottom: 0;
+                @include font-text-md;
             }
             .bonus-banner__title {
                 @include font-text-xl;
             }
             .bonus-banner__block {
                 padding-left: 80px;
+            }
+
+            & > img {
+                max-width: 150px;
+                left: -2px;
+                bottom: -2px;
             }
         }
     }

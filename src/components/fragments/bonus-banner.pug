@@ -1,7 +1,8 @@
-//- @defaultData = bonusBanners
+//- @defaultData = bonusBanner2
 //- @mixin
+include /components/fragments/button.pug
 mixin bonusBanner(item)
-    div.bonus-banner(style=`background-image: ${item.grad}` class=`${item.modificator ? item.modificator : ''}`)
+    div.bonus-banner( style=`background-image: ${item.grad}`, class=item.modificator ? item.modificator : '')
         .bonus-banner__content 
             p.bonus-banner__type= item.type 
             p.bonus-banner__title= item.title

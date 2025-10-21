@@ -17,7 +17,7 @@
         flex: 1;
         @include flex(column, stretch, flex-start, 16px);
 
-        &--pros {
+        &--cons {
             .pros-cons__list li:before {
                 content: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="%23fff"><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11"/></mask><path d="M0 11C0 4.925 4.925 0 11 0s11 4.925 11 11-4.925 11-11 11S0 17.075 0 11" fill="%23FF0048"/><path d="M0 0h22zm22 12c0 6.075-4.925 11-11 11S0 18.075 0 12v-1c0 5.523 4.925 10 11 10s11-4.477 11-10zM0 22V0zM22 0v22z" fill="%23fff" mask="url(%23a)"/><path d="M6.05 11h9.9" stroke="%23fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>');
             }

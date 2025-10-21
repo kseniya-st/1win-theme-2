@@ -13,7 +13,8 @@
         color: var(--text-main, #fff);
         @include font-text-md;
 
-        img {
+        img,
+        svg {
             min-width: 20px;
             width: 20px;
             height: 20px;
@@ -37,7 +38,8 @@
         text-align: center;
         @include font-text-lg;
 
-        img {
+        img,
+        svg {
             width: 66px;
             height: 66px;
             min-width: 66px;
@@ -46,8 +48,8 @@
     }
 
     &__time {
-        @include flex(column, center, center, 8px);
-        padding-block: 30px;
+        @include flex(column, center, center, 4px);
+        padding-block: 25px;
         color: var(--text-secondary, #d2d2d2);
         text-align: center;
         @include font-text-sm;
@@ -76,8 +78,5 @@
             left: 0;
             background: var(--line-color, #353740);
         }
-    }
-
-    @include media-max-sm {
     }
 }

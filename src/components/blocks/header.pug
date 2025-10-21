@@ -10,13 +10,13 @@ header.header.js-header
             nav.header__nav.js-burger__nav.js-menu.js-more
                 ul.header-menu.js-menu__list.js-more__menu
                     each el in navigation
-                        li.js-more__item.js-menu__item(class=`item ${el.submenu ? 'parent' : ''}`)
+                        li.item.js-more__item.js-menu__item(class=`${el.submenu ? 'parent' : ''} ${el.modificator ? el.modificator : ''}`)
                             a(href=el.link)= el.title 
                             if el.submenu
                                 +icon("arrow-down")
                                 ul.submenu.js-menu__list
                                     each submenuEl in el.submenu 
-                                        li.item.js-menu__item(class=`item ${submenuEl.submenu ? 'parent' : ''}`)   
+                                        li.item.js-menu__item(class=`${submenuEl.submenu ? 'parent' : ''} ${submenuEl.modificator ? submenuEl.modificator : ''}`)   
                                             a(href=submenuEl.link)
                                                 if submenuEl.svg 
                                                     +icon(submenuEl.svg)
@@ -25,7 +25,7 @@ header.header.js-header
                                                 +icon("arrow-down")
                                                 ul.submenu
                                                     each submenuEl2 in submenuEl.submenu 
-                                                        li.item.js-menu__item   
+                                                        li.item.js-menu__item(class=`${submenuEl2.modificator ? submenuEl2.modificator : ''}`)   
                                                             a(href=submenuEl2.link)
                                                                 if submenuEl2.svg 
                                                                     +icon(submenuEl2.svg)

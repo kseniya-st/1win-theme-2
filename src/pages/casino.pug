@@ -9,7 +9,8 @@ html(lang="en")
     body
         include /layouts/base.pug
         include ../components/blocks/header.pug
-
+        include ../components/fragments/breadcrumbs.pug
+        
         main
             section.wrapper.section-hero
                 .section-hero__wrap 
@@ -33,7 +34,7 @@ html(lang="en")
                 h2 Live games              
                 +button("btn--tertiary btn--small", "View All", null, "right-arrow")
                 ul.grid-block.grid-block--d7.grid-block--m2
-                    each item in slotCards 
+                    each item in slotCards2 
                         +slotCard(item)
 
             section.wrapper 
@@ -41,14 +42,14 @@ html(lang="en")
                 include ../components/fragments/last-winners.pug
 
             section.wrapper 
+                h2 Discover 1win Casino in Argentina
                 .content-img
                     .content-img__content 
-                        h2 Discover 1win Casino in Argentina
                         p 
                             a(href="#") 1win
                             |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
                         +button('btn--primary', 'Register')
-                    img(src="img/content-img.png", alt="")
+                    img(src="img/content-img.png" alt="")
 
             section.wrapper 
                 h2 Discover 1win Casino in Argentina

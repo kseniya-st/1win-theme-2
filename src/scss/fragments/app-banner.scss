@@ -13,7 +13,10 @@
     & > img {
         align-self: flex-end;
         margin-bottom: -16px;
-        max-width: 164px;
+        width: 164px;
+        height: 144px;
+        object-fit: cover;
+        object-position: center top;
     }
 
     &__content {

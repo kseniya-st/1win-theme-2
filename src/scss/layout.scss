@@ -41,6 +41,9 @@
         }
     }
 
+    &:first-child {
+        margin-top: 31px;
+    }
     @include media-max-sm {
         & > img:not([class]) {
             margin-top: 16px;
@@ -55,13 +58,9 @@
         & > .btn {
             width: 100%;
         }
-    }
-}
 
-.breadcrumbs + main > .wrapper:first-child {
-    margin-top: 31px;
-
-    @include media-max-sm {
-        margin-top: 16px;
+        &:first-child {
+            margin-top: 16px;
+        }
     }
 }

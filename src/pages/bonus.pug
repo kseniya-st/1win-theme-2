@@ -9,6 +9,7 @@ html(lang="en")
     body
         include /layouts/base.pug
         include ../components/blocks/header.pug
+        include ../components/fragments/breadcrumbs.pug
 
         main
             section.wrapper.section-hero
@@ -18,7 +19,6 @@ html(lang="en")
                         p Discover 1win Argentina, an online betting and casino platform with a wide range of games and exciting betting opportunities. 1win is a secure and easy-to-use platform that offers users exciting 1win casino games. From live betting to popular slots, 1win offers quality entertainment for all players.
                     +bonusBanner(bonusBanner2) 
                 img(src="img/section-hero-bonus.png" alt="")
-                include ../components/fragments/app-info.pug
 
             section.wrapper 
                 include ../components/fragments/toc-section.pug
@@ -38,7 +38,7 @@ html(lang="en")
                         p 
                             a(href="#") 1win
                             |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
-                        +button("btn--primary", "Download for Android", "android")
+                        +button("btn--primary", "Register")
                     img(src="img/content-img.png" alt="")
 
             section.wrapper 

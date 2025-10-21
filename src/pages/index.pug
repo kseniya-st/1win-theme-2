@@ -44,13 +44,13 @@ html(lang="en")
                 h2 Live games              
                 +button("btn--tertiary btn--small", "View All", null, "right-arrow")
                 ul.grid-block.grid-block--d7.grid-block--m2
-                    each item in slotCards 
+                    each item in slotCards2 
                         +slotCard(item)
 
             section.wrapper 
                 h2 Latest winners
                 include ../components/fragments/last-winners.pug
-            
+
             section.wrapper 
                 .content-img
                     .content-img__content 
@@ -59,7 +59,7 @@ html(lang="en")
                             a(href="#") Lorem ipsum dolor
                             |  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         +button('btn--primary', 'Register')
-                    img(src="img/content-img.png", alt="")
+                    img(src="img/content-img.png" alt="")
                 +table(table, false)
 
             section.wrapper.with-btn 
@@ -71,14 +71,14 @@ html(lang="en")
                         +bonusCard(item)
 
             section.wrapper 
+                h2 Discover 1win Casino in Argentina
                 .content-img
                     .content-img__content 
-                        h2 Discover 1win Casino in Argentina
                         p 
                             a(href="#") 1win
                             |  Argentina stands out in the online gaming market for offering a unique and reliable casino experience. 1win's main mission is to provide safe, high-quality entertainment. Since its creation in 2018, 1win has been trusted thanks to its Curaçao license and generous promotions such as the 500% welcome bonus. Players from Argentina can benefit from various banking methods and exceptional customer service.
                         +button('btn--primary', 'Register')
-                    img(src="img/content-img.png", alt="")
+                    img(src="img/content-img.png" alt="")
 
             section.wrapper 
                 +table(table1, true)

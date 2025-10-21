@@ -24,8 +24,11 @@
             border-radius: 50%;
         }
 
-        & > svg {
+        &::after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m7.5 15 5-5-5-5" stroke="%23fff" stroke-width="2" stroke-linecap="round"/></svg>');
             min-width: 20px;
+            height: 20px;
+            display: block;
             margin-left: auto;
         }
 

@@ -113,5 +113,10 @@
             border-radius: 0;
             background: transparent;
         }
+
+        &__link {
+            font-weight: 500;
+            @include font-text-sm;
+        }
     }
 }

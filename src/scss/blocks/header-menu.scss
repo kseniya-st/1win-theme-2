@@ -135,6 +135,7 @@
         .submenu {
             width: max-content;
             max-width: 250px;
+            min-width: 153px;
 
             padding: 8px;
             border-radius: var(--card-radius, 16px);
@@ -237,25 +238,29 @@
                     }
 
                     & > .item {
-                        &:not(.parent) > :is(a, span),
-                        &.parent {
-                            padding-inline: calc(16px + 8px);
-                        }
+                        font-weight: 500;
+                        @include font-text-sm;
                     }
 
                     & > .item.active .submenu {
-                        width: calc(100% + 24px * 2);
-                        margin-inline: -24px;
+                        width: calc(100% + 32px);
+                        margin-inline: -16px;
 
                         & > .item {
+                            font-weight: 400;
                             &:not(.parent) > :is(a, span),
                             &.parent {
-                                padding-inline: calc(24px + 8px);
+                                padding-inline: calc(16px + 8px);
                             }
                         }
                     }
                 }
 
+                &.current > .submenu {
+                    &::before {
+                        background: var(--secondary-button-bg, #0051ff);
+                    }
+                }
                 & > svg {
                     transform: rotate(-180deg);
                 }

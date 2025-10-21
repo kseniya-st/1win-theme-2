@@ -1,6 +1,7 @@
 {
     "bonusBanner": [
         {
+            "modificator": "",
             "grad": " var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
             "type": "Welcome Bonus",
             "title": "+100% on the first deposit",
@@ -8,6 +9,7 @@
             "img": "bonus-banner-img-1.png"
         },
         {
+            "modificator": "",
             "grad": "var(--bonus-bg-green, linear-gradient(180deg, #62C525 0%, #50A11E 100%));",
             "type": "Cashback",
             "title": "Weekly cashback up to 30%",
@@ -16,7 +18,7 @@
         }
     ],
     "bonusBanner2": {
-        "modificator":"bonus-banner--v2",
+        "modificator": "bonus-banner--v2",
         "grad": " var(--bonus-bg-fillet, linear-gradient(180deg, #9A4AFF 0%, #7100FF 100%));",
         "type": "Welcome Bonus",
         "title": "+100% on the first deposit",
@@ -24,8 +26,8 @@
         "btn": true
     },
     "bonusBanner3": {
-        "modificator":"bonus-banner--v2",
-        "grad":"var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
+        "modificator": "bonus-banner--v2",
+        "grad": "var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
         "type": "Welcome Bonus",
         "title": "+100% on the first deposit",
         "img": "bonus-banner-img-4.png",

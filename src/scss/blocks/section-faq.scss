@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px 24px;
+    align-items: flex-start;
 
     margin-top: 20px;
 
@@ -34,7 +35,7 @@
             padding-bottom: 16px;
             summary {
                 padding-bottom: 0;
-                svg {
+                &::after {
                     transform: rotate(-180deg);
                 }
             }
@@ -70,7 +71,12 @@
             left: 16px;
         }
 
-        svg {
+        &::after {
+            content: "";
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="m5 7.5 5 5 5-5" stroke="%23fff" stroke-width="2" stroke-linecap="round"/></svg>');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
             width: 27px;
             height: 27px;
             min-width: 27px;

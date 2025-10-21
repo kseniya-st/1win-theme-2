@@ -3,7 +3,7 @@
 .more-block {
     position: relative;
     align-self: stretch;
-    // display: none;
+    margin-left: 8px;
 
     &::after {
         content: "";
@@ -14,9 +14,9 @@
     }
 
     &__btn {
-        @include flex(row, center, center, 6px);
+        @include flex(row, center, center, 3px);
         height: 100%;
-        padding: 9px;
+        min-width: 50px;
         cursor: pointer;
 
         border-radius: var(--button-radius, 12px);
@@ -38,7 +38,7 @@
     &__btn::after {
         border-radius: 50%;
         display: block;
-        @include size(6px, 6px);
+        @include size(4px, 4px);
         background: var(--On-Surface, #f4f8fd);
     }
 

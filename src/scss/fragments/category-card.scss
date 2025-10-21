@@ -13,7 +13,8 @@
     color: var(--text-main, #fff);
     @include font-text-lg-m;
 
-    img {
+    & > img,
+    & > svg {
         position: absolute;
         width: 73px;
         height: 73px;

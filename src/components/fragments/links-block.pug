@@ -1,9 +1,7 @@
 include /layouts/base.pug
 ul.grid-block.grid-block--d5.grid-block--fit
     each item in linksBlock
-        li.links-block__item
-            a(href="/").links-block__link
+        li.link-block
+            a(href="/").link-block__link
                 img(src=`img/${item.img}`, alt="")
                 |  #{item.text}
-                +icon("right-arrow")
-            

@@ -2,6 +2,7 @@
 
 .footer {
     position: relative;
+    margin-top: 0;
     padding-block: 48px;
     @include flex(column, flex-start, flex-start, 32px);
 
@@ -59,6 +60,9 @@
                     color: var(--accent-base, #0051ff);
                 }
             }
+        }
+        &-link {
+            display: block;
         }
     }
 
@@ -129,6 +133,23 @@
             }
             &--bottom {
                 gap: 16px;
+            }
+        }
+
+        &__nav {
+            &-item {
+                &:not(:has(a)):first-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__logos {
+            gap: 9px;
+
+            img,
+            svg {
+                max-height: 20px;
             }
         }
     }

@@ -27,7 +27,7 @@
         background: var(--card-bg, #1d1e21);
 
         width: 100%;
-        max-width: calc(var(--width-container));
+        max-width: 1320px;
         max-height: calc(100vh - var(--offsets, 20px));
 
         overflow: hidden;
@@ -54,14 +54,13 @@
             min-width: 200px;
         }
 
-        @include media-max-sm {
+        @include media-max-mlg {
             height: 100%;
             width: 100%;
             max-height: 100%;
             max-width: 100%;
             margin: 0;
             border-radius: 0;
-            padding: 16px;
 
             grid-template-columns: 1fr auto;
             grid-template-rows: auto 1fr auto;
@@ -78,6 +77,10 @@
                 grid-row: 3 / 4;
             }
         }
+
+        @include media-max-sm {
+            padding: 16px;
+        }
     }
 
     &__body {
@@ -90,7 +93,7 @@
         overflow-y: auto;
         @include thin-v-scrollbar;
 
-        @include media-max-sm {
+        @include media-max-mlg {
             aspect-ratio: unset;
         }
 

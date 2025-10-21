@@ -4,9 +4,10 @@
         "tbody": [
             [{ "th": "Developer" }, { "td": "1Win" }],
             [{ "th": "Launch" }, { "td": "2022" }],
-            [{ "th": "Volatility" }, { "td": "95%" }],
-            [{ "th": "Min/Max Bet" }, { "td": "High" }],
-            [{ "th": "Multipliers" }, { "td": "0.50€ / 24€" }]
+            [{ "th": "RTP" }, { "td": "95%" }],
+            [{ "th": "Volatility" }, { "td": "High" }],
+            [{ "th": "Min/Max Bet" }, { "td": "0.50€ / 24€" }],
+            [{ "th": "Multipliers" }, { "td": "x2 to x1500" }]
         ]
     },
     "table1": {
@@ -34,26 +35,27 @@
                 { "td": "2022" },
                 { "td": "2022" }
             ],
+            [{ "th": "RTP" }, { "td": "95%" }, { "td": "95%" }, { "td": "95%" }, { "td": "95%" }],
             [
                 { "th": "Volatility" },
-                { "td": "95%" },
-                { "td": "95%" },
-                { "td": "95%" },
-                { "td": "95%" }
-            ],
-            [
-                { "th": "Min/Max Bet" },
                 { "td": "High" },
                 { "td": "High" },
                 { "td": "High" },
                 { "td": "High" }
             ],
             [
-                { "th": "Multipliers" },
+                { "th": "Min/Max Bet" },
                 { "td": "0.50€ / 24€" },
                 { "td": "0.50€ / 24€" },
                 { "td": "0.50€ / 24€" },
                 { "td": "0.50€ / 24€" }
+            ],
+            [
+                { "th": "Multipliers" },
+                { "td": "x2 to x1500" },
+                { "td": "x2 to x1500" },
+                { "td": "x2 to x1500" },
+                { "td": "x2 to x1500" }
             ]
         ]
     }

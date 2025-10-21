@@ -2,9 +2,9 @@
 
 .content-img {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.43538fr 1fr;
     column-gap: 32px;
-    margin-top: 24px;
+    margin-top: 20px;
 
     &:first-child {
         margin-top: 0;
@@ -14,8 +14,9 @@
         grid-column: 1 / -1;
     }
     .btn {
-        &:not(:first-child) {
-            margin-top: 24px;
+        margin-top: 20px;
+        &:first-child {
+            margin-top: 0;
         }
     }
 
@@ -26,15 +27,11 @@
     img {
         width: 100%;
         grid-column: span 1;
-
         margin: 0;
-
-        &:not(:first-child) {
-            margin: 0;
-        }
     }
 
     &--reversed {
+        grid-template-columns: 1fr 1.43538fr;
         .content-img__content {
             order: 1;
         }
@@ -47,29 +44,41 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: 24px;
+        gap: 0;
+
+        &__content {
+            display: contents;
+        }
 
         & > img {
             width: 100%;
+            order: -1;
+            margin-top: 20px;
+        }
+
+        h2 {
+            order: -2;
         }
 
         .btn {
             width: 100%;
+        }
 
-            &:not(:first-child) {
-                margin-top: 24px;
+        &:has(h2) {
+            & > img {
             }
         }
     }
 
     @include media-max-sm {
-        margin-top: 20px;
-        gap: 20px;
+        margin-top: 16px;
+
+        & > img {
+            margin-top: 16px;
+        }
 
         .btn {
-            &:not(:first-child) {
-                margin-top: 20px;
-            }
+            margin-top: 16px;
         }
     }
 }

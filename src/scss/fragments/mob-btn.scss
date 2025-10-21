@@ -7,6 +7,7 @@
     width: calc(100% - 16px * 2);
     padding: 8px;
     border-radius: var(--button-radius, 12px);
+    overflow: hidden;
     background: var(--bonus-bg-orange, linear-gradient(180deg, #ff9f3f 0%, #ff720d 100%));
 
     display: flex;
@@ -23,13 +24,12 @@
         left: 0;
         bottom: 0;
         max-width: 163px;
-        max-height: 59px;
+        max-height: 49px;
         z-index: -1;
     }
 
     .btn {
         margin-left: auto;
-        border-radius: 8px;
         padding: 8px 12px;
         font-size: rem(12);
         line-height: 150%;
@@ -72,6 +72,7 @@
     }
 
     &--v2 {
+        padding: 8px 12px;
         background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
     }
 

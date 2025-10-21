@@ -4,7 +4,7 @@
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 16px;
     align-items: flex-start;
 
     margin-top: 20px;
@@ -19,7 +19,7 @@
         d4: 350px,
         d5: 250px,
         d6: 220px,
-        d7: 180px,
+        d7: 190px,
     );
 
     @each $name, $value in $grid-sizes {
@@ -52,6 +52,9 @@
         }
         &.grid-block--d2 {
             grid-template-columns: 1fr;
+        }
+        &.grid-block--mg10 {
+            gap: 10px;
         }
     }
 

@@ -9,7 +9,8 @@ html(lang="en")
     body
         include /layouts/base.pug
         include ../components/blocks/header.pug
-
+        include ../components/fragments/breadcrumbs.pug
+        
         main
             section.wrapper.section-hero
                 .section-hero__wrap 
@@ -55,7 +56,7 @@ html(lang="en")
                     li Stake on virtual basketball game results;
                     li Choose which virtual dog will cross the finish line first and which will cross the other.
                 +button("btn--primary", "Register")
-            
+
             section.wrapper 
                 +table(table1, true)
 

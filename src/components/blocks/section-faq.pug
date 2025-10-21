@@ -1,10 +1,9 @@
 include /layouts/base.pug
 section.wrapper
-    h2 FAQs
+    h2 FAQ
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     .section-faq
         each item in faq 
             details.section-faq__item 
                 summary= item.quest
-                    +icon("arrow-down")
                 p= item.answer
