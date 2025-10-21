@@ -100,7 +100,7 @@
         & > * {
             grid-column: span 1;
         }
-        & > *:nth-of-type(n + 3) {
+        & > *:nth-child(n + 3) {
             grid-column: span 2;
         }
     }
@@ -108,12 +108,12 @@
     @include media-max-mlg {
         grid-template-columns: 1fr;
 
-        & > *:nth-of-type(2) {
+        & > *:nth-child(2) {
             order: 100;
         }
 
         &--reversed {
-            & > *:nth-of-type(1) {
+            & > *:nth-child(1) {
                 order: 105;
             }
         }

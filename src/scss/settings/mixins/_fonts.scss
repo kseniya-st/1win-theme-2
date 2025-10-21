@@ -5,9 +5,15 @@ $font-size-default: 16;
 @function rem($pxValue) {
     @return math.div($pxValue, $font-size-default) + rem;
 }
+
 @mixin font-display-l() {
     font-size: rem(36);
     line-height: 140%;
+}
+
+@mixin font-display-sm() {
+    font-size: rem(30);
+    line-height: 130%;
 }
 
 @mixin font-display-xs() {

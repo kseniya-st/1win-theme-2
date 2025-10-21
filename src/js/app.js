@@ -9,3 +9,4 @@ import { initLang } from "./fragments/lang";
 import { initMore } from "./blocks/more";
 import { header } from "./blocks/header";
 import { imgGallery } from "./fragments/imgGallery";
+import { initModal } from "./blocks/modal";

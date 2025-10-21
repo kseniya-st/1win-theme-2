@@ -14,8 +14,8 @@ html(lang="en")
             section.wrapper.section-hero.section-hero--reversed
                 .section-hero__demo(style="background-image: url('img/demo.png');")
                     .section-hero__demo-btns     
-                        +button("btn--primary", "Play for real money")
-                        +button("btn--extra", "Play Demo")
+                        +button("btn--primary js-modal__btn", "Play for real money")
+                        button.btn.btn--extra.js-modal__open( type="button" data-sf-a="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" data-modal-title="Aviator demo mode" data-modal-url="https://demo.spribe.io/launch/aviator?currency=INR&lang=EN") Play Demo
                 .section-hero__wrap 
                     .section-hero__block 
                         h1 Aviator for Argentine players: the best game at 1win
@@ -66,6 +66,7 @@ html(lang="en")
 
         include ../components/fragments/go-up.pug
         include ../components/blocks/footer.pug
+        include ../components/blocks/modal.pug
         include ../components/fragments/mob-btn.pug
         +mobBtn(mobBtn)
 
