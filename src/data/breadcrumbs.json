@@ -1,0 +1,12 @@
+{
+    "breadcrumbsApp": [
+        {
+            "name": "Home",
+            "url": "#"
+        },
+        {
+            "name": "App",
+            "url": "#"
+        }
+    ]
+}

@@ -10,7 +10,7 @@ mixin bonusBanner(item)
         if item.promo || item.btn 
             .bonus-banner__block
                 if item.promo 
-                    .promo-block.js-copy
+                    .promo-block.promo-block--tr.js-copy
                         p.promo-block__text.js-copy__text Promocode
                         button.btn.promo-block__btn 
                             +icon("copy")

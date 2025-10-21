@@ -19,6 +19,10 @@
 
     &__block {
         @include flex(row, center, flex-start, 8px);
+        flex: 1;
+        & > .btn {
+            flex: 1 0 auto;
+        }
     }
 
     &__type {

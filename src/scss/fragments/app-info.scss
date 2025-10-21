@@ -58,7 +58,7 @@
         &-td {
             position: relative;
             @include flex(column, flex-start, center, 2px);
-            padding-left: 60px;
+            padding-left: 48px;
             min-height: 36px;
 
             color: var(--text-secondary, #d2d2d2);
@@ -147,7 +147,7 @@
 
             &-td {
                 min-height: 28px;
-                padding-left: 28px;
+                padding-left: 36px;
                 gap: 4px;
 
                 img,

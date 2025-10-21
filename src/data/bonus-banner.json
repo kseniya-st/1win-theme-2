@@ -22,5 +22,14 @@
         "title": "+100% on the first deposit",
         "img": "bonus-banner-img-3.png",
         "btn": true
+    },
+    "bonusBanner3": {
+        "modificator":"bonus-banner--v2",
+        "grad":"var(--bonus-bg-orange, linear-gradient(180deg, #FF9F3F 0%, #FF720D 100%));",
+        "type": "Welcome Bonus",
+        "title": "+100% on the first deposit",
+        "img": "bonus-banner-img-4.png",
+        "promo": true,
+        "btn": true
     }
 }

@@ -59,9 +59,9 @@
 }
 
 .breadcrumbs + main > .wrapper:first-child {
-    margin-top: 20px;
+    margin-top: 31px;
 
     @include media-max-sm {
-        margin-top: 10px;
+        margin-top: 16px;
     }
 }

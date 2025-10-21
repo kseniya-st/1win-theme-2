@@ -14,5 +14,17 @@
                 "link": "video.mp4"
             }
         ]
+    },
+    "gallery1": {
+        "id": "gallery1",
+        "list": [
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" },
+            { "modificator": "", "img": "1win.png", "link": "1win.png" }
+        ]
     }
 }

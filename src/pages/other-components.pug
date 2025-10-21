@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    title other components
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet",  href=cssPath)
+    body
+        include /layouts/base.pug
+        include ../components/blocks/header.pug
+
+        main
+            section.wrapper.section-hero
+                .section-hero__wrap 
+                    .section-hero__block 
+                        h1 The best 1win Argentina bonuses: discover them!
+                        p Discover 1win Argentina, an online betting and casino platform with a wide range of games and exciting betting opportunities. 1win is a secure and easy-to-use platform that offers users exciting 1win casino games. From live betting to popular slots, 1win offers quality entertainment for all players.
+                    +bonusBanner(bonusBanner3) 
+                img(src="img/section-hero-bonus.png" alt="")
+                include ../components/fragments/app-info.pug
+            
+            section.wrapper 
+                h2 Screenshots
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                +gallery(gallery1)
+
+
+        include ../components/fragments/go-up.pug
+        include ../components/blocks/footer.pug
+        include ../components/blocks/modal.pug
+
+        script(src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        script(src=jsPath, type=jsType ? 'module' : undefined)

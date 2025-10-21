@@ -1,41 +1,76 @@
 @use "../settings" as *;
 
 .mob-btn {
-    @include sticky($bottom: 0px, $left: 0);
+    @include sticky($bottom: 16px, $left: 16px);
     z-index: $z-index-fixed;
 
-    padding: 12px 16px 12px 70px;
-    background: var(--surface-container, #1d211a);
+    width: calc(100% - 16px * 2);
+    padding: 8px;
+    border-radius: var(--button-radius, 12px);
+    background: var(--bonus-bg-orange, linear-gradient(180deg, #ff9f3f 0%, #ff720d 100%));
 
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
 
-    img,
-    svg {
+    &:has(> img) {
+        padding-left: 50px;
+    }
+
+    & > img,
+    & > svg {
         position: absolute;
-        left: 16px;
+        left: 0;
         bottom: 0;
-        max-width: 46px;
-        max-height: 56px;
+        max-width: 163px;
+        max-height: 59px;
     }
 
     .btn {
         margin-left: auto;
         border-radius: 8px;
-        padding: 8px;
-        font-size: rem(18);
-        width: 145px;
-        min-width: min-content;
+        padding: 8px 12px;
+        font-size: rem(12);
+        line-height: 150%;
+        font-weight: 500;
+        overflow: visible;
+
+        &:has(img) {
+            padding-right: 61px;
+
+            img {
+                position: absolute;
+                right: 11px;
+                bottom: 0;
+                width: 40px;
+                height: 43px;
+            }
+        }
+    }
+
+    &__main {
+        @include flex(column, flex-start, center, 4px);
+        color: var(--text-main, #fff);
     }
 
     &__text {
-        @include flex(column, flex-start, center, 2px);
-        color: var(--on-surface, #e1e4d9);
+        @include font-text-xs;
+    }
+
+    &__title {
+        font-weight: 500;
+        @include font-text-sm;
 
         span {
-            color: var(--primary, #7ade50);
+            font-style: italic;
+            font-size: rem(14);
+            line-height: 150%;
+            font-weight: 800;
         }
+    }
+
+    &--v2 {
+        background: var(--bonus-bg-fillet, linear-gradient(180deg, #9a4aff 0%, #7100ff 100%));
     }
 
     @include media-min-sm {
