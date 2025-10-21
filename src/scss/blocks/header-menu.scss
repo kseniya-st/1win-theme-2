@@ -199,6 +199,12 @@
 
         .item {
             transition-duration: 0s;
+
+            & > * {
+                position: relative;
+                z-index: 1;
+            }
+
             &.parent {
                 flex-wrap: wrap;
                 align-items: flex-start;
@@ -218,6 +224,7 @@
 
             &.active {
                 & > .submenu {
+                    z-index: 0;
                     display: flex;
                     width: calc(100% + 32px);
                     margin-inline: -16px;

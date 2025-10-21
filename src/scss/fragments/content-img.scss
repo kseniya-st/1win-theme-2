@@ -50,6 +50,18 @@
             display: contents;
         }
 
+        &:has(> img) {
+            .content-img__content {
+                p:not([class]):first-child,
+                ul:not([class]):first-child,
+                ul.wp-block-list:first-child,
+                ol:not([class]):first-child,
+                ol.wp-block-list:first-child {
+                    margin-top: 16px;
+                }
+            }
+        }
+
         & > img {
             width: 100%;
             order: -1;

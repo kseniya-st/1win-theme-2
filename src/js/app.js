@@ -1,8 +1,6 @@
 import { initGoUp } from "./fragments/go-up";
 import { initToc } from "./blocks/toc";
-import { initAccord } from "./fragments/accord";
 import { initScrollContainer } from "./fragments/scrollContainer";
-import { initForm } from "./fragments/form";
 import { initCopyBtn } from "./fragments/copyBtn";
 import { initButton } from "./fragments/button";
 import { initLang } from "./fragments/lang";
