@@ -19,9 +19,17 @@
         padding: 9px;
         cursor: pointer;
 
+        border-radius: var(--button-radius, 12px);
+
+        @include transition(background);
+
         &::before,
         &::after {
             content: "";
+        }
+
+        @include hoverActive {
+            background: var(--card-secondary-bg, #27292d);
         }
     }
 

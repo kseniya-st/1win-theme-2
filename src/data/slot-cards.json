@@ -1,93 +1,100 @@
 {
     "slotCards": [
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         },
         {
-            "img":"slot-card.png",
+            "img": "slot-card.png",
             "btns": [
                 {
-                    "modificator":"btn--primary",
-                    "text":"Play now"
+                    "modificator": "btn--primary js-modal__btn",
+                    "text": "Play now"
                 },
                 {
-                    "modificator":"btn--extra",
-                    "text":"Play Demo"
+                    "modificator": "btn--extra",
+                    "text": "Play Demo",
+                    "demo": true
                 }
             ]
         }

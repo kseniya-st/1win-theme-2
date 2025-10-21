@@ -56,7 +56,7 @@
         color: var(--button-color, #fff);
 
         @include hoverActiveFocus {
-            background: var(--button-bg, #00b24b);
+            background: var(--button-hover-bg, #008a3a);
         }
     }
 

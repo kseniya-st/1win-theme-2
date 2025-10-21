@@ -41,7 +41,7 @@
 
     summary {
         @include relative();
-        @include flex(row, center, space-between, 16px);
+        @include flex(row, flex-start, space-between, 16px);
 
         padding: 16px 16px 16px 52px;
         cursor: pointer;
@@ -68,6 +68,9 @@
         }
 
         svg {
+            width: 27px;
+            height: 27px;
+            min-width: 27px;
             @include transition(transform);
         }
     }

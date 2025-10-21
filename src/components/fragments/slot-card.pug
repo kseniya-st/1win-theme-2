@@ -6,5 +6,9 @@ mixin slotCard(item)
         .slot-card__wrap 
             .slot-card__btns
                 each btn in item.btns
-                    +button(btn.modificator, btn.text)
+                    if btn.demo
+                        button.btn.js-modal__open(class=`${btn.modificator ? btn.modificator : ''}` type="button" data-sf-a="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" data-modal-title="Aviator demo mode" data-modal-url="https://demo.spribe.io/launch/aviator?currency=INR&lang=EN")= btn.text
+                    else
+                        +button(btn.modificator, btn.text)
         img(src=`img/${item.img}`, alt="")
+        
