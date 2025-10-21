@@ -33,6 +33,7 @@
 
     &__nav {
         width: 640px;
+        max-width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px 60px;
@@ -82,6 +83,7 @@
         flex-wrap: wrap;
 
         &-link {
+            @include flex(row, center, center);
             width: 42px;
             height: 42px;
             min-width: 42px;

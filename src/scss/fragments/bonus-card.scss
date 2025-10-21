@@ -24,6 +24,8 @@
         max-width: calc(100% + 13px * 2);
         margin-inline: -13px;
         max-height: 160px;
+        object-fit: cover;
+        border-radius: 14px;
     }
 
     color: var(--text-main, #fff);

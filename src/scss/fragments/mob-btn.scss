@@ -24,6 +24,7 @@
         bottom: 0;
         max-width: 163px;
         max-height: 59px;
+        z-index: -1;
     }
 
     .btn {
@@ -44,6 +45,7 @@
                 bottom: 0;
                 width: 40px;
                 height: 43px;
+                object-fit: contain;
             }
         }
     }

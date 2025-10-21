@@ -19,6 +19,8 @@
     &__item {
         @include relative;
         border-radius: var(--card-radius, 16px);
+        display: flex;
+        flex-direction: column;
 
         background: var(--card-bg, #1d1e21);
         @include transition(background);
@@ -40,6 +42,7 @@
     }
 
     summary {
+        flex: 1;
         @include relative();
         @include flex(row, flex-start, space-between, 16px);
 

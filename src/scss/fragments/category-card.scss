@@ -3,6 +3,7 @@
 .category-card {
     position: relative;
     padding: 16px 75px 16px 16px;
+    align-self: stretch;
 
     @include flex(row, center, flex-start, 16px);
     border-radius: var(--card-radius, 16px);
@@ -17,6 +18,7 @@
         width: 73px;
         height: 73px;
         right: -14px;
-        top: 0;
+        bottom: -14px;
+        object-fit: contain;
     }
 }

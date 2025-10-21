@@ -1,15 +1,7 @@
 @use "../settings" as *;
 
-.links-block {
-    margin-top: 20px;
-    display: grid;
-
-    gap: 16px;
-    align-items: stretch;
-
-    &:first-child {
-        margin-top: 0;
-    }
+.link-block {
+    align-self: stretch;
 
     &__link {
         height: 100%;
@@ -40,9 +32,5 @@
         @include hoverActiveFocus {
             background: var(--card-secondary-bg, #27292d);
         }
-    }
-
-    @include media-max-sm {
-        margin-top: 16px;
     }
 }

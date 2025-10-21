@@ -33,6 +33,8 @@
         @include font-display-xs;
 
         & > svg {
+            min-width: 32px;
+            width: 32px;
             @include transition(transform);
         }
 
@@ -43,6 +45,11 @@
         @include media-max-sm {
             padding: 16px;
             @include font-text-xl;
+
+            & > svg {
+                min-width: 24px;
+                width: 24px;
+            }
         }
     }
 

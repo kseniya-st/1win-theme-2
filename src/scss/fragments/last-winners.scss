@@ -13,6 +13,7 @@
     }
 
     &__item {
+        align-self: stretch;
         position: relative;
         min-width: 154px;
         margin-top: 32px;
@@ -38,10 +39,13 @@
         }
 
         &-user {
+            max-width: 100%;
             margin-block: 2px 8px;
             color: var(--text-secondary, #d2d2d2);
             text-align: center;
             @include font-text-xs;
+
+            @include overflowEllipsis;
 
             &:last-child {
                 margin-bottom: 0;

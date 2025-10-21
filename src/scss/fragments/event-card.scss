@@ -4,6 +4,7 @@
     padding: 16px;
     border-radius: var(--card-radius, 16px);
     background: var(--card-bg, #1d1e21);
+    align-self: stretch;
 
     @include flex(column, stretch, flex-start, 16px);
 
@@ -16,6 +17,7 @@
             min-width: 20px;
             width: 20px;
             height: 20px;
+            object-fit: contain;
         }
     }
 

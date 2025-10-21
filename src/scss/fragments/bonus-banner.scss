@@ -11,6 +11,11 @@
     color: var(--text-main, #fff);
     flex-wrap: wrap;
 
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+
     &__content {
         position: relative;
         z-index: 1;

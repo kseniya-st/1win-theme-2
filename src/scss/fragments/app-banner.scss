@@ -13,6 +13,7 @@
     & > img {
         align-self: flex-end;
         margin-bottom: -16px;
+        max-width: 164px;
     }
 
     &__content {
@@ -36,6 +37,11 @@
 
     @include media-max-sm {
         gap: 8px;
+
+        & > img {
+            max-width: 103px;
+        }
+
         &__title {
             gap: 4px;
             @include font-text-sm;
