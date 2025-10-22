@@ -3,7 +3,7 @@
     padding: 3px;
     border-radius: 16px;
     @include flex(row, center, flex-start);
-    background: var(--surf-container, #1f1f1f);
+    background: var(--card-bg, #1d1e21);
 
     $burger-max: $max-mlg;
     $burger-min: $min-mlg;
@@ -140,7 +140,7 @@
             padding: 8px;
             border-radius: var(--card-radius, 16px);
             background: var(--card-bg, #1d1e21);
-            box-shadow: 0px 0px 10px 0px var(--card-secondary-bg, #27292d);
+            box-shadow: 0px 4px 12px 0px #14141499;
 
             @include absolute(calc(100% + 12px), 0);
 
